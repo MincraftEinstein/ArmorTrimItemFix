@@ -31,14 +31,17 @@ public class ModItemModelProvider extends ItemModelProvider {
             if (trimmableKey != null) {
                 ResourceLocation baseTexture = trimmableKey.withPrefix("item/");
                 ItemModelBuilder model = generatedItem(trimmableKey.toString(), baseTexture);
+
                 for (ResourceKey<TrimMaterial> material : ArmorTrimItemFix.TRIM_MATERIALS.keySet()) {
                     float materialValue = ArmorTrimItemFix.TRIM_MATERIALS.get(material);
-                    ResourceLocation materialKey = material.location();
-                    for (ResourceKey<TrimPattern> pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
+                    String materialName = material.location().getPath();
+
+                    for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
-                        String patternName = pattern.location().getPath();
-                        ItemModelBuilder builder = generatedItem(trimmableKey.getPath() + "_" + patternName + "_" + materialKey.getPath() + "_trim",
-                                baseTexture, loc("trims/items/" + armorType.getName() + "_" + patternName + "_trim"));
+                        String patternName = pattern.getPath();
+
+                        ItemModelBuilder builder = generatedItem(trimmableKey.getPath() + "_" + patternName + "_" + materialName + "_trim",
+                                baseTexture, loc("trims/items/" + armorType.getName() + "_" + patternName + "_trim_" + materialName));
 
                         model = model.override().model(getExistingFile(builder.getLocation()))
                                 .predicate(ArmorTrimItemFix.PREDICATE_ID, patternValue)

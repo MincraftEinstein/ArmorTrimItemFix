@@ -11,7 +11,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.armortrim.*;
+import net.minecraft.world.item.armortrim.ArmorTrim;
+import net.minecraft.world.item.armortrim.TrimMaterial;
+import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.item.armortrim.TrimPatterns;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -38,8 +41,8 @@ public class ArmorTrimItemFix {
     public static final Map<ResourceKey<TrimMaterial>, Float> TRIM_MATERIALS = Util.make(new HashMap<>(), map -> {
         map.put(TrimMaterials.AMETHYST, 1F);
     });
-    public static final Map<ResourceKey<TrimPattern>, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
-        map.put(TrimPatterns.SILENCE, 0.0001F);
+    public static final Map<ResourceLocation, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
+        map.put(TrimPatterns.SILENCE.location(), 0.0001F);
     });
 
     public ArmorTrimItemFix() {
@@ -66,9 +69,7 @@ public class ArmorTrimItemFix {
                 CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);
                 if (trimTag.contains("pattern")) {
                     String pattern = trimTag.getString("pattern");
-                    if (pattern.equals("minecraft:silence")) {
-                        return 1;
-                    }
+                    return TRIM_PATTERNS.get(ResourceLocation.tryParse(pattern));
                 }
             }
             return 0;
