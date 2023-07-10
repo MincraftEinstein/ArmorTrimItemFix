@@ -1,15 +1,15 @@
 package einstein.armortrimitemfix;
 
 import com.mojang.logging.LogUtils;
+import einstein.armortrimitemfix.data.ModItemModelProvider;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.armortrim.ArmorTrim;
-import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -22,9 +22,17 @@ public class ArmorTrimItemFix {
     public static final String MOD_ID = "armortrimitemfix";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final ResourceLocation PREDICATE_ID = loc("trim_pattern");
+
     public ArmorTrimItemFix() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::clientSetup);
+        modEventBus.addListener(this::generateData);
+    }
+
+    void generateData(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(generator.getPackOutput(), event.getExistingFileHelper()));
     }
 
     void clientSetup(FMLClientSetupEvent event) {
@@ -34,8 +42,9 @@ public class ArmorTrimItemFix {
         registerArmorTrimProperty(Items.IRON_BOOTS);
     }
 
-    public static void registerArmorTrimProperty(ItemLike item) {
-        ItemProperties.register(item.asItem(), loc("trim_pattern"), (stack, level, entity, seed) -> {
+    public static void registerArmorTrimProperty(Item item) {
+        ModItemModelProvider.TRIMMABLES.add(item);
+        ItemProperties.register(item, PREDICATE_ID, (stack, level, entity, seed) -> {
             CompoundTag tag = stack.getTag();
             if (tag != null && tag.contains(ArmorTrim.TAG_TRIM_ID)) {
                 CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);
