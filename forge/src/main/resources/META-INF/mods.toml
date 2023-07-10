@@ -1,0 +1,31 @@
+modLoader = "javafml"
+loaderVersion = "[46,)"
+license = "All right reserved"
+
+[[mods]]
+    modId = "armortrimitemfix"
+    version = "${file.jarVersion}"
+    displayName = "${mod_name}"
+    #updateJSONURL="https://change.me.example.invalid/updates.json"
+    #displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
+    #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+    logoFile = "logo.png"
+    credits = "Thanks for this example mod goes to Java"
+    authors = "${mod_author}"
+    description = '''
+This is a long form description of the mod. You can write whatever you want here
+'''
+
+[[dependencies.armortrimitemfix]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[46,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.armortrimitemfix]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.20, 1.21)"
+    ordering = "NONE"
+    side = "BOTH"
