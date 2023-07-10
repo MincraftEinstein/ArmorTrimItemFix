@@ -20,6 +20,9 @@
     ],
     "client": [
       "einstein.armortrimitemfix.ArmorTrimItemFixClient"
+    ],
+    "fabric-datagen": [
+      "einstein.armortrimitemfix.ArmorTrimItemFixData"
     ]
   },
   "depends": {

@@ -36,8 +36,8 @@ public class ModItemModelProvider extends ItemModelProvider {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
                         String patternName = pattern.getPath();
 
-                        ItemModelBuilder builder = generatedItem(trimmableKey.getPath() + "_" + patternName + "_" + materialName + "_trim",
-                                baseTexture, loc("trims/items/" + armorType.getName() + "_" + patternName + "_trim_" + materialName));
+                        ItemModelBuilder builder = generatedItem(ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName).toString(),
+                                baseTexture, ArmorTrimItemFix.layerLoc(armorType, patternName, materialName));
 
                         model = model.override().model(getExistingFile(builder.getLocation()))
                                 .predicate(ArmorTrimItemFix.PREDICATE_ID, patternValue)
