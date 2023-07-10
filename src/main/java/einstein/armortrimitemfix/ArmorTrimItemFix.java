@@ -2,19 +2,25 @@ package einstein.armortrimitemfix;
 
 import com.mojang.logging.LogUtils;
 import einstein.armortrimitemfix.data.ModItemModelProvider;
+import net.minecraft.Util;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.armortrim.ArmorTrim;
+import net.minecraft.world.item.armortrim.*;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Mod(ArmorTrimItemFix.MOD_ID)
 public class ArmorTrimItemFix {
@@ -23,6 +29,18 @@ public class ArmorTrimItemFix {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public static final ResourceLocation PREDICATE_ID = loc("trim_pattern");
+    public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
+        map.put(Items.IRON_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.IRON_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.IRON_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.IRON_BOOTS, ArmorItem.Type.BOOTS);
+    });
+    public static final Map<ResourceKey<TrimMaterial>, Float> TRIM_MATERIALS = Util.make(new HashMap<>(), map -> {
+        map.put(TrimMaterials.AMETHYST, 1F);
+    });
+    public static final Map<ResourceKey<TrimPattern>, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
+        map.put(TrimPatterns.SILENCE, 0.0001F);
+    });
 
     public ArmorTrimItemFix() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -36,14 +54,12 @@ public class ArmorTrimItemFix {
     }
 
     void clientSetup(FMLClientSetupEvent event) {
-        registerArmorTrimProperty(Items.IRON_HELMET);
-        registerArmorTrimProperty(Items.IRON_CHESTPLATE);
-        registerArmorTrimProperty(Items.IRON_LEGGINGS);
-        registerArmorTrimProperty(Items.IRON_BOOTS);
+        for (Item trimmable : TRIMMABLES.keySet()) {
+            registerArmorTrimProperty(trimmable);
+        }
     }
 
     public static void registerArmorTrimProperty(Item item) {
-        ModItemModelProvider.TRIMMABLES.add(item);
         ItemProperties.register(item, PREDICATE_ID, (stack, level, entity, seed) -> {
             CompoundTag tag = stack.getTag();
             if (tag != null && tag.contains(ArmorTrim.TAG_TRIM_ID)) {

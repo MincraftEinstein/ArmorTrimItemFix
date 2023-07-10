@@ -3,7 +3,10 @@
     {
       "type": "minecraft:paletted_permutations",
       "textures": [
-        "armortrimitemfix:trims/items/chestplate_silence_trim"
+        "armortrimitemfix:trims/items/helmet_silence_trim",
+        "armortrimitemfix:trims/items/chestplate_silence_trim",
+        "armortrimitemfix:trims/items/leggings_silence_trim",
+        "armortrimitemfix:trims/items/boots_silence_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
