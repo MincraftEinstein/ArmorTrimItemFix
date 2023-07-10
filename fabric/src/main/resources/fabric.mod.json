@@ -16,7 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "einstein.armortrimitemfix.ExampleMod"
+      "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
+    ],
+    "client": [
+      "einstein.armortrimitemfix.ArmorTrimItemFixClient"
     ]
   },
   "depends": {

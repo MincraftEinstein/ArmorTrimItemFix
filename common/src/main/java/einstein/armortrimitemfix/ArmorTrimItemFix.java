@@ -1,11 +1,14 @@
 package einstein.armortrimitemfix;
 
 import net.minecraft.Util;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.item.armortrim.TrimPatterns;
@@ -35,6 +38,26 @@ public class ArmorTrimItemFix {
     });
 
     public static void init() {
+    }
+
+    public static void clientSetup() {
+        for (Item trimmable : ArmorTrimItemFix.TRIMMABLES.keySet()) {
+            ArmorTrimItemFix.registerArmorTrimProperty(trimmable);
+        }
+    }
+
+    public static void registerArmorTrimProperty(Item item) {
+        ItemProperties.register(item, PREDICATE_ID, (stack, level, entity, seed) -> {
+            CompoundTag tag = stack.getTag();
+            if (tag != null && tag.contains(ArmorTrim.TAG_TRIM_ID)) {
+                CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);
+                if (trimTag.contains("pattern")) {
+                    String pattern = trimTag.getString("pattern");
+                    return TRIM_PATTERNS.get(ResourceLocation.tryParse(pattern));
+                }
+            }
+            return 0;
+        });
     }
 
     public static ResourceLocation loc(String path) {
