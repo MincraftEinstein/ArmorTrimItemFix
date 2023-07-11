@@ -25,16 +25,64 @@ public class ArmorTrimItemFix {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     public static final ResourceLocation PREDICATE_ID = loc("trim_pattern");
     public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
+        map.put(Items.LEATHER_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.LEATHER_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.LEATHER_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.LEATHER_BOOTS, ArmorItem.Type.BOOTS);
+        map.put(Items.CHAINMAIL_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.CHAINMAIL_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.CHAINMAIL_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.CHAINMAIL_BOOTS, ArmorItem.Type.BOOTS);
         map.put(Items.IRON_HELMET, ArmorItem.Type.HELMET);
         map.put(Items.IRON_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
         map.put(Items.IRON_LEGGINGS, ArmorItem.Type.LEGGINGS);
         map.put(Items.IRON_BOOTS, ArmorItem.Type.BOOTS);
+        map.put(Items.GOLDEN_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.GOLDEN_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.GOLDEN_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.GOLDEN_BOOTS, ArmorItem.Type.BOOTS);
+        map.put(Items.DIAMOND_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.DIAMOND_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.DIAMOND_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.DIAMOND_BOOTS, ArmorItem.Type.BOOTS);
+        map.put(Items.NETHERITE_HELMET, ArmorItem.Type.HELMET);
+        map.put(Items.NETHERITE_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
+        map.put(Items.NETHERITE_LEGGINGS, ArmorItem.Type.LEGGINGS);
+        map.put(Items.NETHERITE_BOOTS, ArmorItem.Type.BOOTS);
+        map.put(Items.TURTLE_HELMET, ArmorItem.Type.HELMET);
     });
     public static final Map<ResourceKey<TrimMaterial>, Float> TRIM_MATERIALS = Util.make(new HashMap<>(), map -> {
+        map.put(TrimMaterials.QUARTZ, 0.1F);
+        map.put(TrimMaterials.IRON, 0.2F);
+        map.put(TrimMaterials.NETHERITE, 0.3F);
+        map.put(TrimMaterials.REDSTONE, 0.4F);
+        map.put(TrimMaterials.COPPER, 0.5F);
+        map.put(TrimMaterials.GOLD, 0.6F);
+        map.put(TrimMaterials.EMERALD, 0.7F);
+        map.put(TrimMaterials.DIAMOND, 0.8F);
+        map.put(TrimMaterials.LAPIS, 0.9F);
         map.put(TrimMaterials.AMETHYST, 1F);
     });
     public static final Map<ResourceLocation, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
         map.put(TrimPatterns.SILENCE.location(), 0.0001F);
+        float f = 0;
+        float f1 = 0.0001F;
+        map.put(TrimPatterns.SENTRY.location(), f += f1);
+        map.put(TrimPatterns.DUNE.location(), f += f1);
+        map.put(TrimPatterns.COAST.location(), f += f1);
+        map.put(TrimPatterns.WILD.location(), f += f1);
+        map.put(TrimPatterns.WARD.location(), f += f1);
+        map.put(TrimPatterns.EYE.location(), f += f1);
+        map.put(TrimPatterns.VEX.location(), f += f1);
+        map.put(TrimPatterns.TIDE.location(), f += f1);
+        map.put(TrimPatterns.SNOUT.location(), f += f1);
+        map.put(TrimPatterns.RIB.location(), f += f1);
+        map.put(TrimPatterns.SPIRE.location(), f += f1);
+        map.put(TrimPatterns.WAYFINDER.location(), f += f1);
+        map.put(TrimPatterns.SHAPER.location(), f += f1);
+        map.put(TrimPatterns.SILENCE.location(), f += f1);
+        map.put(TrimPatterns.RAISER.location(), f += f1);
+        map.put(TrimPatterns.HOST.location(), f += f1);
     });
 
     public static void init() {
