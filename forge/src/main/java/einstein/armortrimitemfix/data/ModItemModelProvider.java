@@ -1,7 +1,6 @@
 package einstein.armortrimitemfix.data;
 
 import einstein.armortrimitemfix.ArmorTrimItemFix;
-import einstein.armortrimitemfix.ArmorTrimItemFixForge;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.resources.ResourceKey;
@@ -11,8 +10,6 @@ import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static einstein.armortrimitemfix.ArmorTrimItemFix.loc;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -26,7 +23,13 @@ public class ModItemModelProvider extends ItemModelProvider {
             ResourceLocation trimmableKey = ForgeRegistries.ITEMS.getKey(trimmable);
             if (trimmableKey != null) {
                 ResourceLocation baseTexture = trimmableKey.withPrefix("item/");
-                ItemModelBuilder model = generatedItem(trimmableKey.toString(), baseTexture);
+                ItemModelBuilder model;
+                if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
+                    model = generatedItem(trimmableKey.toString(), baseTexture, baseTexture.withSuffix("_overlay"));
+                }
+                else {
+                    model = generatedItem(trimmableKey.toString(), baseTexture);
+                }
 
                 for (ResourceKey<TrimMaterial> material : ArmorTrimItemFix.TRIM_MATERIALS.keySet()) {
                     float materialValue = ArmorTrimItemFix.TRIM_MATERIALS.get(material);
@@ -35,9 +38,16 @@ public class ModItemModelProvider extends ItemModelProvider {
                     for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
                         String patternName = pattern.getPath();
+                        String name = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName).toString();
+                        ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(armorType, patternName, materialName);
+                        ItemModelBuilder builder;
 
-                        ItemModelBuilder builder = generatedItem(ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName).toString(),
-                                baseTexture, ArmorTrimItemFix.layerLoc(armorType, patternName, materialName));
+                        if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
+                            builder = generatedItem(name, baseTexture, baseTexture.withSuffix("_overlay"), layerLoc);
+                        }
+                        else {
+                            builder = generatedItem(name, baseTexture, layerLoc);
+                        }
 
                         model = model.override().model(getExistingFile(builder.getLocation()))
                                 .predicate(ArmorTrimItemFix.PREDICATE_ID, patternValue)

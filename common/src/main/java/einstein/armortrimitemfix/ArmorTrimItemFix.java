@@ -115,6 +115,10 @@ public class ArmorTrimItemFix {
         return loc("trims/items/" + armorType.getName() + "_" + patternName + "_trim_" + materialName);
     }
 
+    public static boolean isDoubleLayered(Item item) {
+        return item == Items.LEATHER_HELMET || item == Items.LEATHER_CHESTPLATE || item == Items.LEATHER_LEGGINGS || item == Items.LEATHER_BOOTS;
+    }
+
     public static ResourceLocation loc(String path) {
         return new ResourceLocation(MOD_ID, path);
     }
