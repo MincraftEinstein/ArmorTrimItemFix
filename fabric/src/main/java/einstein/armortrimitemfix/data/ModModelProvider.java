@@ -30,9 +30,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators generators) {
         ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, armorType) -> {
-            ResourceLocation trimmableKey = BuiltInRegistries.ITEM.getKey(trimmable);
+            ResourceLocation trimmableKey = BuiltInRegistries.ITEM.getKey(trimmable).withPrefix("item/");
             if (trimmableKey != null) {
-                ResourceLocation baseTexture = trimmableKey.withPrefix("item/");
+                ResourceLocation baseTexture = trimmableKey;
                 List<PatternMaterialData> patternMaterialMap = new ArrayList<>();
 
                 for (ResourceKey<TrimMaterial> material : ArmorTrimItemFix.TRIM_MATERIALS.keySet()) {
