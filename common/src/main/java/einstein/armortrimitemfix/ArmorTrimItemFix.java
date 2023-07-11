@@ -61,7 +61,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation overrideName(ResourceLocation item, String patternName, String materialName) {
-        return new ResourceLocation(item.getPath() + "_" + patternName + "_" + materialName + "_trim");
+        return loc(item.getPath() + "_" + patternName + "_" + materialName + "_trim");
     }
 
     public static ResourceLocation layerLoc(ArmorItem.Type armorType, String patternName, String materialName) {
