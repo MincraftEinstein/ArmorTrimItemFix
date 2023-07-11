@@ -5,16 +5,13 @@ import com.google.gson.JsonObject;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TextureSlot;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.armortrim.TrimMaterial;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -38,9 +35,9 @@ public class ModModelProvider extends FabricModelProvider {
             if (trimmableKey != null) {
                 List<PatternMaterialData> patternMaterialMap = new ArrayList<>();
 
-                for (ResourceKey<TrimMaterial> material : ArmorTrimItemFix.TRIM_MATERIALS.keySet()) {
-                    float materialValue = ArmorTrimItemFix.TRIM_MATERIALS.get(material);
-                    String materialName = material.location().getPath();
+                for (ArmorTrimItemFix.MaterialData materialData : ArmorTrimItemFix.TRIM_MATERIALS) {
+                    float materialValue = materialData.propertyValue();
+                    String materialName = materialData.getName(trimmable);
 
                     for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);

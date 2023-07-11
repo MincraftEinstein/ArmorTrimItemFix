@@ -3,9 +3,7 @@ package einstein.armortrimitemfix.data;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.ItemModelGenerators;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -31,9 +29,9 @@ public class ModItemModelProvider extends ItemModelProvider {
                     model = generatedItem(trimmableKey.toString(), baseTexture);
                 }
 
-                for (ResourceKey<TrimMaterial> material : ArmorTrimItemFix.TRIM_MATERIALS.keySet()) {
-                    float materialValue = ArmorTrimItemFix.TRIM_MATERIALS.get(material);
-                    String materialName = material.location().getPath();
+                for (ArmorTrimItemFix.MaterialData materialData : ArmorTrimItemFix.TRIM_MATERIALS) {
+                    float materialValue = materialData.propertyValue();
+                    String materialName = materialData.getName(trimmable);
 
                     for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);

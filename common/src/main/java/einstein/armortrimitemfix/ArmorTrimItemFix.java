@@ -3,19 +3,16 @@ package einstein.armortrimitemfix;
 import net.minecraft.Util;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.armortrim.ArmorTrim;
-import net.minecraft.world.item.armortrim.TrimMaterial;
-import net.minecraft.world.item.armortrim.TrimMaterials;
 import net.minecraft.world.item.armortrim.TrimPatterns;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ArmorTrimItemFix {
@@ -51,17 +48,17 @@ public class ArmorTrimItemFix {
         map.put(Items.NETHERITE_BOOTS, ArmorItem.Type.BOOTS);
         map.put(Items.TURTLE_HELMET, ArmorItem.Type.HELMET);
     });
-    public static final Map<ResourceKey<TrimMaterial>, Float> TRIM_MATERIALS = Util.make(new HashMap<>(), map -> {
-        map.put(TrimMaterials.QUARTZ, 0.1F);
-        map.put(TrimMaterials.IRON, 0.2F);
-        map.put(TrimMaterials.NETHERITE, 0.3F);
-        map.put(TrimMaterials.REDSTONE, 0.4F);
-        map.put(TrimMaterials.COPPER, 0.5F);
-        map.put(TrimMaterials.GOLD, 0.6F);
-        map.put(TrimMaterials.EMERALD, 0.7F);
-        map.put(TrimMaterials.DIAMOND, 0.8F);
-        map.put(TrimMaterials.LAPIS, 0.9F);
-        map.put(TrimMaterials.AMETHYST, 1F);
+    public static final List<MaterialData> TRIM_MATERIALS = Util.make(new ArrayList<>(), list -> {
+        list.add(new MaterialData("quartz", 0.1F));
+        list.add(new MaterialData("iron", 0.2F, ArmorMaterials.IRON, "iron_darker"));
+        list.add(new MaterialData("netherite", 0.3F, ArmorMaterials.NETHERITE, "netherite_darker"));
+        list.add(new MaterialData("redstone", 0.4F));
+        list.add(new MaterialData("copper", 0.5F));
+        list.add(new MaterialData("gold", 0.6F, ArmorMaterials.GOLD, "gold_darker"));
+        list.add(new MaterialData("emerald", 0.7F));
+        list.add(new MaterialData("diamond", 0.8F, ArmorMaterials.DIAMOND, "diamond_darker"));
+        list.add(new MaterialData("lapis", 0.9F));
+        list.add(new MaterialData("amethyst", 1.0F));
     });
     public static final Map<ResourceLocation, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
         float f = 0;
@@ -121,5 +118,20 @@ public class ArmorTrimItemFix {
 
     public static ResourceLocation loc(String path) {
         return new ResourceLocation(MOD_ID, path);
+    }
+
+    public record MaterialData(String materialName, float propertyValue, ArmorMaterial armorMaterial,
+                               String overrideName) {
+
+        public MaterialData(String materialName, float propertyValue) {
+            this(materialName, propertyValue, null, null);
+        }
+
+        public String getName(Item item) {
+            if (item instanceof ArmorItem armorItem && armorMaterial != null && overrideName != null && armorItem.getMaterial() == armorMaterial) {
+                return overrideName;
+            }
+            return materialName;
+        }
     }
 }
