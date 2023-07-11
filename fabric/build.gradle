@@ -36,8 +36,19 @@ loom {
             ideConfigGenerated(true)
             runDir("run")
         }
+        datagenClient {
+            inherit client
+            setConfigName("Fabric Data")
+            ideConfigGenerated(true)
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+            runDir("build/datagen")
+        }
     }
 }
+
+sourceSets.main.resources { srcDirs += ["src/main/generated"] }
 
 tasks.withType(JavaCompile).configureEach {
     source(project(":common").sourceSets.main.allSource)
