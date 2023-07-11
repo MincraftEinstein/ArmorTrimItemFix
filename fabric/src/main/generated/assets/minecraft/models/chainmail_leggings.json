@@ -1,0 +1,120 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:chainmail_leggings_wild_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 4.0E-4,
+        "minecraft:trim_type": 0.3
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "minecraft:item/chainmail_leggings"
+  }
+}
