@@ -65,7 +65,7 @@ public class ArmorTrimItemFix {
     });
     public static final Map<ResourceLocation, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
         float f = 0;
-        float f1 = 0.0001F;
+        float f1 = 0.0625F;
         map.put(TrimPatterns.SENTRY.location(), f += f1);
         map.put(TrimPatterns.DUNE.location(), f += f1);
         map.put(TrimPatterns.COAST.location(), f += f1);
