@@ -5,15 +5,19 @@
       "textures": [
         "armortrimitemfix:trims/items/helmet_silence_trim",
         "armortrimitemfix:trims/items/helmet_sentry_trim",
+        "armortrimitemfix:trims/items/helmet_vex_trim",
 
         "armortrimitemfix:trims/items/chestplate_silence_trim",
         "armortrimitemfix:trims/items/chestplate_sentry_trim",
+        "armortrimitemfix:trims/items/chestplate_vex_trim",
 
         "armortrimitemfix:trims/items/leggings_silence_trim",
         "armortrimitemfix:trims/items/leggings_sentry_trim",
+        "armortrimitemfix:trims/items/leggings_vex_trim",
 
         "armortrimitemfix:trims/items/boots_silence_trim",
-        "armortrimitemfix:trims/items/boots_sentry_trim"
+        "armortrimitemfix:trims/items/boots_sentry_trim",
+        "armortrimitemfix:trims/items/boots_vex_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
