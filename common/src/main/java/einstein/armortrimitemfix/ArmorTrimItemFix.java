@@ -7,13 +7,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.armortrim.TrimPatterns;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ArmorTrimItemFix {
 
@@ -48,7 +47,7 @@ public class ArmorTrimItemFix {
         map.put(Items.NETHERITE_BOOTS, ArmorItem.Type.BOOTS);
         map.put(Items.TURTLE_HELMET, ArmorItem.Type.HELMET);
     });
-    public static final List<MaterialData> TRIM_MATERIALS = Util.make(new ArrayList<>(), list -> {
+    public static final TreeSet<MaterialData> TRIM_MATERIALS = Util.make(new TreeSet<>(), list -> {
         list.add(new MaterialData("quartz", 0.1F));
         list.add(new MaterialData("iron", 0.2F, ArmorMaterials.IRON, "iron_darker"));
         list.add(new MaterialData("netherite", 0.3F, ArmorMaterials.NETHERITE, "netherite_darker"));
@@ -60,7 +59,7 @@ public class ArmorTrimItemFix {
         list.add(new MaterialData("lapis", 0.9F));
         list.add(new MaterialData("amethyst", 1.0F));
     });
-    public static final Map<ResourceLocation, Float> TRIM_PATTERNS = Util.make(new HashMap<>(), map -> {
+    public static final Map<ResourceLocation, Float> TRIM_PATTERNS = createValueSortedMap(Util.make(new HashMap<>(), map -> {
         float f = 0;
         float f1 = 0.0625F;
         map.put(TrimPatterns.SENTRY.location(), f += f1);
@@ -79,7 +78,7 @@ public class ArmorTrimItemFix {
         map.put(TrimPatterns.SILENCE.location(), f += f1);
         map.put(TrimPatterns.RAISER.location(), f += f1);
         map.put(TrimPatterns.HOST.location(), f += f1);
-    });
+    }), Float::compareTo);
 
     public static void init() {
     }
@@ -120,8 +119,13 @@ public class ArmorTrimItemFix {
         return new ResourceLocation(MOD_ID, path);
     }
 
+    public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
+        return map.entrySet().stream().sorted(Map.Entry.comparingByValue(comparator))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+    }
+
     public record MaterialData(String materialName, float propertyValue, ArmorMaterial armorMaterial,
-                               String overrideName) {
+                               String overrideName) implements Comparable<MaterialData> {
 
         public MaterialData(String materialName, float propertyValue) {
             this(materialName, propertyValue, null, null);
@@ -132,6 +136,11 @@ public class ArmorTrimItemFix {
                 return overrideName;
             }
             return materialName;
+        }
+
+        @Override
+        public int compareTo(@NotNull MaterialData o) {
+            return Float.compare(propertyValue(), o.propertyValue());
         }
     }
 }
