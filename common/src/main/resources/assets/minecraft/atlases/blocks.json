@@ -7,21 +7,25 @@
         "armortrimitemfix:trims/items/helmet_sentry_trim",
         "armortrimitemfix:trims/items/helmet_vex_trim",
         "armortrimitemfix:trims/items/helmet_wild_trim",
+        "armortrimitemfix:trims/items/helmet_coast_trim",
 
         "armortrimitemfix:trims/items/chestplate_silence_trim",
         "armortrimitemfix:trims/items/chestplate_sentry_trim",
         "armortrimitemfix:trims/items/chestplate_vex_trim",
         "armortrimitemfix:trims/items/chestplate_wild_trim",
+        "armortrimitemfix:trims/items/chestplate_coast_trim",
 
         "armortrimitemfix:trims/items/leggings_silence_trim",
         "armortrimitemfix:trims/items/leggings_sentry_trim",
         "armortrimitemfix:trims/items/leggings_vex_trim",
         "armortrimitemfix:trims/items/leggings_wild_trim",
+        "armortrimitemfix:trims/items/leggings_coast_trim",
 
         "armortrimitemfix:trims/items/boots_silence_trim",
         "armortrimitemfix:trims/items/boots_sentry_trim",
         "armortrimitemfix:trims/items/boots_vex_trim",
-        "armortrimitemfix:trims/items/boots_wild_trim"
+        "armortrimitemfix:trims/items/boots_wild_trim",
+        "armortrimitemfix:trims/items/boots_coast_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
