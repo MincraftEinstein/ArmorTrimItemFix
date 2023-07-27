@@ -9,6 +9,7 @@
         "armortrimitemfix:trims/items/helmet_wild_trim",
         "armortrimitemfix:trims/items/helmet_coast_trim",
         "armortrimitemfix:trims/items/helmet_dune_trim",
+        "armortrimitemfix:trims/items/helmet_wayfinder_trim",
 
         "armortrimitemfix:trims/items/chestplate_silence_trim",
         "armortrimitemfix:trims/items/chestplate_sentry_trim",
@@ -16,6 +17,7 @@
         "armortrimitemfix:trims/items/chestplate_wild_trim",
         "armortrimitemfix:trims/items/chestplate_coast_trim",
         "armortrimitemfix:trims/items/chestplate_dune_trim",
+        "armortrimitemfix:trims/items/chestplate_wayfinder_trim",
 
         "armortrimitemfix:trims/items/leggings_silence_trim",
         "armortrimitemfix:trims/items/leggings_sentry_trim",
@@ -23,13 +25,15 @@
         "armortrimitemfix:trims/items/leggings_wild_trim",
         "armortrimitemfix:trims/items/leggings_coast_trim",
         "armortrimitemfix:trims/items/leggings_dune_trim",
+        "armortrimitemfix:trims/items/leggings_wayfinder_trim",
 
         "armortrimitemfix:trims/items/boots_silence_trim",
         "armortrimitemfix:trims/items/boots_sentry_trim",
         "armortrimitemfix:trims/items/boots_vex_trim",
         "armortrimitemfix:trims/items/boots_wild_trim",
         "armortrimitemfix:trims/items/boots_coast_trim",
-        "armortrimitemfix:trims/items/boots_dune_trim"
+        "armortrimitemfix:trims/items/boots_dune_trim",
+        "armortrimitemfix:trims/items/boots_wayfinder_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
