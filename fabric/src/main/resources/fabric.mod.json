@@ -3,17 +3,18 @@
   "id": "armortrimitemfix",
   "version": "${version}",
   "name": "${mod_name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Trimmed armor items in Minecraft display one of four generic trim textures for every item, no matter what trim you put on an item the texture is always the same. This mod fixes that by adding more item trim textures that change depending on the trim applied",
   "authors": [
     "${mod_author}"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix",
+    "sources": "https://github.com/MincraftEinstein/ArmorTrimItemFix",
+    "issues": "https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
   },
   "license": "All rights reserved",
   "icon": "pack.png",
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
       "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
@@ -31,7 +32,11 @@
     "minecraft": "1.20.x",
     "java": ">=17"
   },
-  "suggests": {
-    "another-mod": "*"
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/gSsaFAvrBM"
+      }
+    }
   }
 }

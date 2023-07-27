@@ -7,13 +7,14 @@ license = "All right reserved"
     version = "${file.jarVersion}"
     displayName = "${mod_name}"
     #updateJSONURL="https://change.me.example.invalid/updates.json"
-    #displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
-    #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
+    displayURL="https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix"
+    issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
     logoFile = "pack.png"
-    credits = "Thanks for this example mod goes to Java"
+    credits = ""
     authors = "${mod_author}"
+    displayTest = "IGNORE_ALL_VERSION"
     description = '''
-This is a long form description of the mod. You can write whatever you want here
+Trimmed armor items in Minecraft display one of four generic trim textures for every item, no matter what trim you put on an item the texture is always the same. This mod fixes that by adding more item trim textures that change depending on the trim applied
 '''
 
 [[dependencies.armortrimitemfix]]
@@ -21,7 +22,7 @@ This is a long form description of the mod. You can write whatever you want here
     mandatory = true
     versionRange = "[46,)"
     ordering = "NONE"
-    side = "BOTH"
+    side = "CLIENT"
 
 [[dependencies.armortrimitemfix]]
     modId = "minecraft"
