@@ -15,6 +15,7 @@
         "armortrimitemfix:trims/items/helmet_host_trim",
         "armortrimitemfix:trims/items/helmet_ward_trim",
         "armortrimitemfix:trims/items/helmet_tide_trim",
+        "armortrimitemfix:trims/items/helmet_snout_trim",
 
         "armortrimitemfix:trims/items/chestplate_silence_trim",
         "armortrimitemfix:trims/items/chestplate_sentry_trim",
@@ -28,6 +29,7 @@
         "armortrimitemfix:trims/items/chestplate_host_trim",
         "armortrimitemfix:trims/items/chestplate_ward_trim",
         "armortrimitemfix:trims/items/chestplate_tide_trim",
+        "armortrimitemfix:trims/items/chestplate_snout_trim",
 
         "armortrimitemfix:trims/items/leggings_silence_trim",
         "armortrimitemfix:trims/items/leggings_sentry_trim",
@@ -41,6 +43,7 @@
         "armortrimitemfix:trims/items/leggings_host_trim",
         "armortrimitemfix:trims/items/leggings_ward_trim",
         "armortrimitemfix:trims/items/leggings_tide_trim",
+        "armortrimitemfix:trims/items/leggings_snout_trim",
 
         "armortrimitemfix:trims/items/boots_silence_trim",
         "armortrimitemfix:trims/items/boots_sentry_trim",
@@ -53,7 +56,8 @@
         "armortrimitemfix:trims/items/boots_shaper_trim",
         "armortrimitemfix:trims/items/boots_host_trim",
         "armortrimitemfix:trims/items/boots_ward_trim",
-        "armortrimitemfix:trims/items/boots_tide_trim"
+        "armortrimitemfix:trims/items/boots_tide_trim",
+        "armortrimitemfix:trims/items/boots_snout_trim"
       ],
       "palette_key": "minecraft:trims/color_palettes/trim_palette",
       "permutations": {
