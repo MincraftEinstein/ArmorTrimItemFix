@@ -4,7 +4,7 @@
 [![Curseforge Page](https://img.shields.io/badge/Curseforge-Page-orange?style=for-the-badge&logo=curseforge "CurseForge Page")](https://www.curseforge.com/minecraft/mc-mods/armor-trim-item-fix)
 [![Modrinth Page](https://img.shields.io/badge/Modrinth-Page-1bd96a?style=for-the-badge&logo=modrinth "Modrinth Page")](https://modrinth.com/mod/armor-trim-item-fix)
 [![Discord Invite](https://img.shields.io/badge/Discord-Einsteins%20Lab-blue?style=for-the-badge&logo=discord)](https://discord.gg/gSsaFAvrBM)
-![Game Side](https://img.shields.io/badge/Side-Client-FF4500?style=for-the-badge)
+![Environment](https://img.shields.io/badge/Environment-Client-FF4500?style=for-the-badge)
 
 ### **📘 Description**
 Trimmed armor items in Minecraft display one of four generic trim textures for every item, no matter what trim you
