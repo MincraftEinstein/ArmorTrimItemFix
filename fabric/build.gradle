@@ -62,6 +62,9 @@ tasks.withType(JavaCompile).configureEach {
 
 processResources {
     from project(":common").sourceSets.main.resources
+
+    exclude('.cache/')
+
     inputs.property("version", version)
 
     filesMatching("fabric.mod.json") {

@@ -67,6 +67,9 @@ tasks.withType(JavaCompile).configureEach {
 processResources {
     from project(":common").sourceSets.main.resources
 
+    exclude("armortrimitemfix.accesswidener")
+    exclude('.cache/')
+
     inputs.property("version", version)
 
     filesMatching("META-INF/mods.toml") {
