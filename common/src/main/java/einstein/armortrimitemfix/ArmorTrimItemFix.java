@@ -19,7 +19,7 @@ public class ArmorTrimItemFix {
     public static final String MOD_ID = "armortrimitemfix";
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
-    public static final ResourceLocation PREDICATE_ID = loc("trim_pattern");
+    public static final ResourceLocation TRIM_PATTERN_PREDICATE_ID = loc("trim_pattern");
     public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
         map.put(Items.LEATHER_HELMET, ArmorItem.Type.HELMET);
         map.put(Items.LEATHER_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
@@ -90,7 +90,7 @@ public class ArmorTrimItemFix {
     }
 
     public static void registerArmorTrimProperty(Item item) {
-        ItemProperties.register(item, PREDICATE_ID, (stack, level, entity, seed) -> {
+        ItemProperties.register(item, TRIM_PATTERN_PREDICATE_ID, (stack, level, entity, seed) -> {
             CompoundTag tag = stack.getTag();
             if (tag != null && tag.contains(ArmorTrim.TAG_TRIM_ID)) {
                 CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);

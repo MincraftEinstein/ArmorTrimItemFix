@@ -77,7 +77,7 @@ public class ModModelProvider extends FabricModelProvider {
             JsonObject override = new JsonObject();
             JsonObject predicate = new JsonObject();
 
-            predicate.addProperty(ArmorTrimItemFix.PREDICATE_ID.toString(), data.patternValue());
+            predicate.addProperty(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID.toString(), data.patternValue());
             predicate.addProperty(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID.toString(), data.materialValue());
             override.add("predicate", predicate);
             override.addProperty("model", ArmorTrimItemFix.overrideName(name, data.patternName(), data.MaterialName()).toString());

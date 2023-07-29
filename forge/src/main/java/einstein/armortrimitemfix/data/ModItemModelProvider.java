@@ -48,7 +48,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                         }
 
                         model = model.override().model(getExistingFile(builder.getLocation()))
-                                .predicate(ArmorTrimItemFix.PREDICATE_ID, patternValue)
+                                .predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, patternValue)
                                 .predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, materialValue)
                                 .end();
                     }
