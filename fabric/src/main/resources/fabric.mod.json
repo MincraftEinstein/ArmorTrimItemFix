@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "id": "armortrimitemfix",
   "version": "${version}",
-  "name": "${mod_name}",
+  "name": "Armor Trim Item Fix",
   "description": "Trimmed armor items in Minecraft display one of four generic trim textures for every item, no matter what trim you put on an item the texture is always the same. This mod fixes that by adding more item trim textures that change depending on the trim applied",
   "authors": [
-    "${mod_author}"
+    "MincraftEinstein"
   ],
   "contact": {
     "homepage": "https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix",

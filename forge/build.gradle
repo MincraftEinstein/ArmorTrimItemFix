@@ -3,6 +3,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle'
 }
+
 base {
     archivesName = "${mod_name}-forge-${minecraft_version}"
 }
@@ -65,6 +66,12 @@ tasks.withType(JavaCompile).configureEach {
 
 processResources {
     from project(":common").sourceSets.main.resources
+
+    inputs.property("version", version)
+
+    filesMatching("META-INF/mods.toml") {
+        expand("version": version)
+    }
 }
 
 jar.finalizedBy('reobfJar')
