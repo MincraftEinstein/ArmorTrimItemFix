@@ -12,10 +12,7 @@ import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.data.models.model.TextureSlot;
 import net.minecraft.resources.ResourceLocation;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -39,12 +36,12 @@ public class ModModelProvider extends FabricModelProvider {
                     float materialValue = materialData.propertyValue();
                     String materialName = materialData.getName(trimmable);
 
+                    overrides.add(createOverride(ArmorTrimItemFix.vanillaOverrideName(trimmableKey, materialName).toString(), ArmorTrimItemFix.DEFAULT_TRIM_VALUE, materialValue));
+
                     ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, patternValue) -> {
                         String patternName = pattern.getPath();
                         ResourceLocation overrideName = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName);
                         ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(armorType, patternName, materialName);
-                        JsonObject override = new JsonObject();
-                        JsonObject predicate = new JsonObject();
 
                         if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
                             generators.generateLayeredItem(overrideName, trimmableKey, trimmableKey.withSuffix("_overlay"), layerLoc);
@@ -53,11 +50,7 @@ public class ModModelProvider extends FabricModelProvider {
                             generators.generateLayeredItem(overrideName, trimmableKey, layerLoc);
                         }
 
-                        predicate.addProperty(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID.toString(), patternValue);
-                        predicate.addProperty(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID.toString(), materialValue);
-                        override.add("predicate", predicate);
-                        override.addProperty("model", overrideName.toString());
-                        overrides.add(override);
+                        overrides.add(createOverride(overrideName.toString(), patternValue, materialValue));
                     });
                 }
 
@@ -73,7 +66,17 @@ public class ModModelProvider extends FabricModelProvider {
         });
     }
 
-    @NotNull
+    private static JsonObject createOverride(String name, float patternValue, float materialValue) {
+        JsonObject override = new JsonObject();
+        JsonObject predicate = new JsonObject();
+
+        predicate.addProperty(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID.toString(), patternValue);
+        predicate.addProperty(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID.toString(), materialValue);
+        override.add("predicate", predicate);
+        override.addProperty("model", name);
+        return override;
+    }
+
     private static JsonObject getModel(JsonArray overrides, ResourceLocation location, Map<TextureSlot, ResourceLocation> map) {
         JsonObject model = ModelTemplates.TWO_LAYERED_ITEM.createBaseTemplate(location, map);
         model.add("overrides", overrides);

@@ -33,6 +33,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                     float materialValue = materialData.propertyValue();
                     String materialName = materialData.getName(trimmable);
 
+                    model = model.override().model(getExistingFile(ArmorTrimItemFix.vanillaOverrideName(trimmableKey, materialName)))
+                            .predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, ArmorTrimItemFix.DEFAULT_TRIM_VALUE)
+                            .predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, materialValue)
+                            .end();
+
                     for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
                         String patternName = pattern.getPath();

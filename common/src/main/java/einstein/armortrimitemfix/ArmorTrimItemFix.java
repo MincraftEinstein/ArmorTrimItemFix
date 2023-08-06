@@ -20,6 +20,7 @@ public class ArmorTrimItemFix {
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     public static final ResourceLocation TRIM_PATTERN_PREDICATE_ID = loc("trim_pattern");
+    public static final float DEFAULT_TRIM_VALUE = 0.001F;
     public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
         map.put(Items.LEATHER_HELMET, ArmorItem.Type.HELMET);
         map.put(Items.LEATHER_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
@@ -96,7 +97,8 @@ public class ArmorTrimItemFix {
                 CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);
                 if (trimTag.contains("pattern")) {
                     String pattern = trimTag.getString("pattern");
-                    return TRIM_PATTERNS.get(ResourceLocation.tryParse(pattern));
+                    Float value = TRIM_PATTERNS.get(ResourceLocation.tryParse(pattern));
+                    return value == null ? DEFAULT_TRIM_VALUE : value;
                 }
             }
             return 0;
@@ -105,6 +107,10 @@ public class ArmorTrimItemFix {
 
     public static ResourceLocation overrideName(ResourceLocation item, String patternName, String materialName) {
         return loc(item.getPath() + "_" + patternName + "_" + materialName + "_trim");
+    }
+
+    public static ResourceLocation vanillaOverrideName(ResourceLocation item, String materialName) {
+        return new ResourceLocation(item.getPath() + "_" + materialName + "_trim");
     }
 
     public static ResourceLocation layerLoc(ArmorItem.Type armorType, String patternName, String materialName) {
