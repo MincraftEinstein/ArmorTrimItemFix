@@ -33,62 +33,50 @@ public class ModModelProvider extends FabricModelProvider {
         ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, armorType) -> {
             ResourceLocation trimmableKey = BuiltInRegistries.ITEM.getKey(trimmable).withPrefix("item/");
             if (trimmableKey != null) {
-                List<PatternMaterialData> patternMaterialMap = new ArrayList<>();
+                JsonArray overrides = new JsonArray();
 
                 for (ArmorTrimItemFix.MaterialData materialData : ArmorTrimItemFix.TRIM_MATERIALS) {
                     float materialValue = materialData.propertyValue();
                     String materialName = materialData.getName(trimmable);
 
-                    for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
-                        float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
+                    ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, patternValue) -> {
                         String patternName = pattern.getPath();
-                        ResourceLocation name = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName);
+                        ResourceLocation overrideName = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName);
                         ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(armorType, patternName, materialName);
+                        JsonObject override = new JsonObject();
+                        JsonObject predicate = new JsonObject();
 
                         if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
-                            generators.generateLayeredItem(name, trimmableKey, trimmableKey.withSuffix("_overlay"), layerLoc);
+                            generators.generateLayeredItem(overrideName, trimmableKey, trimmableKey.withSuffix("_overlay"), layerLoc);
                         }
                         else {
-                            generators.generateLayeredItem(name, trimmableKey, layerLoc);
+                            generators.generateLayeredItem(overrideName, trimmableKey, layerLoc);
                         }
 
-                        patternMaterialMap.add(new PatternMaterialData(patternName, patternValue, materialName, materialValue));
-                    }
+                        predicate.addProperty(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID.toString(), patternValue);
+                        predicate.addProperty(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID.toString(), materialValue);
+                        override.add("predicate", predicate);
+                        override.addProperty("model", overrideName.toString());
+                        overrides.add(override);
+                    });
                 }
 
                 if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
                     ModelTemplates.TWO_LAYERED_ITEM.create(trimmableKey, TextureMapping.layered(trimmableKey, trimmableKey.withSuffix("_overlay")), generators.output, (location, map) ->
-                            createOverrides(trimmableKey, patternMaterialMap, location, map));
+                            getModel(overrides, location, map));
                 }
                 else {
                     ModelTemplates.FLAT_ITEM.create(trimmableKey, TextureMapping.layer0(trimmableKey), generators.output, (location, map) ->
-                            createOverrides(trimmableKey, patternMaterialMap, location, map));
+                            getModel(overrides, location, map));
                 }
             }
         });
     }
 
     @NotNull
-    private static JsonObject createOverrides(ResourceLocation name, List<PatternMaterialData> patternMaterialMap, ResourceLocation location, Map<TextureSlot, ResourceLocation> map) {
+    private static JsonObject getModel(JsonArray overrides, ResourceLocation location, Map<TextureSlot, ResourceLocation> map) {
         JsonObject model = ModelTemplates.TWO_LAYERED_ITEM.createBaseTemplate(location, map);
-        JsonArray overrides = new JsonArray();
-
-        patternMaterialMap.forEach(data -> {
-            JsonObject override = new JsonObject();
-            JsonObject predicate = new JsonObject();
-
-            predicate.addProperty(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID.toString(), data.patternValue());
-            predicate.addProperty(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID.toString(), data.materialValue());
-            override.add("predicate", predicate);
-            override.addProperty("model", ArmorTrimItemFix.overrideName(name, data.patternName(), data.MaterialName()).toString());
-            overrides.add(override);
-        });
-
         model.add("overrides", overrides);
         return model;
-    }
-
-    private record PatternMaterialData(String patternName, float patternValue, String MaterialName, float materialValue) {
-
     }
 }
