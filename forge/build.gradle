@@ -2,10 +2,17 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.minecraftforge.gradle'
+    id 'org.spongepowered.mixin'
 }
 
 base {
     archivesName = "${mod_name}-forge-${minecraft_version}"
+}
+
+mixin {
+    add(sourceSets.main, "armortrimitemfix.refmap.json")
+
+    config("armortrimitemfix.mixins.json")
 }
 
 minecraft {

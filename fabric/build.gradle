@@ -29,6 +29,10 @@ dependencies {
 loom {
     accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
 
+    mixin {
+        defaultRefmapName.set("armortrimitemfix.refmap.json")
+    }
+
     runs {
         client {
             client()
