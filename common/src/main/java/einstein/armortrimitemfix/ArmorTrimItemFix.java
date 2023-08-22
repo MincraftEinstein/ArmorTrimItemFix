@@ -21,6 +21,24 @@ public class ArmorTrimItemFix {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     public static final ResourceLocation TRIM_PATTERN_PREDICATE_ID = loc("trim_pattern");
     public static final float DEFAULT_TRIM_VALUE = 0.001F;
+    public static final ResourceLocation COLOR_PALETTE_KEY = new ResourceLocation("minecraft:trims/color_palettes/trim_palette");
+    public static final ResourceLocation BLOCK_ATLAS = new ResourceLocation("minecraft:blocks");
+    public static final Map<String, ResourceLocation> PERMUTATIONS = Util.make(new HashMap<>(), map -> {
+        map.put("quartz", new ResourceLocation("minecraft:trims/color_palettes/quartz"));
+        map.put("iron", new ResourceLocation("minecraft:trims/color_palettes/iron"));
+        map.put("gold", new ResourceLocation("minecraft:trims/color_palettes/gold"));
+        map.put("diamond", new ResourceLocation("minecraft:trims/color_palettes/diamond"));
+        map.put("netherite", new ResourceLocation("minecraft:trims/color_palettes/netherite"));
+        map.put("redstone", new ResourceLocation("minecraft:trims/color_palettes/redstone"));
+        map.put("copper", new ResourceLocation("minecraft:trims/color_palettes/copper"));
+        map.put("emerald", new ResourceLocation("minecraft:trims/color_palettes/emerald"));
+        map.put("lapis", new ResourceLocation("minecraft:trims/color_palettes/lapis"));
+        map.put("amethyst", new ResourceLocation("minecraft:trims/color_palettes/amethyst"));
+        map.put("iron_darker", new ResourceLocation("minecraft:trims/color_palettes/iron_darker"));
+        map.put("gold_darker", new ResourceLocation("minecraft:trims/color_palettes/gold_darker"));
+        map.put("diamond_darker", new ResourceLocation("minecraft:trims/color_palettes/diamond_darker"));
+        map.put("netherite_darker", new ResourceLocation("minecraft:trims/color_palettes/netherite_darker"));
+    });
     public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
         map.put(Items.LEATHER_HELMET, ArmorItem.Type.HELMET);
         map.put(Items.LEATHER_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
