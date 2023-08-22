@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/iron_leggings",
-    "layer1": "armortrimitemfix:trims/items/leggings_spire_trim_emerald"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/golden_helmet",
-    "layer1": "armortrimitemfix:trims/items/helmet_tide_trim_lapis"
-  }
-}

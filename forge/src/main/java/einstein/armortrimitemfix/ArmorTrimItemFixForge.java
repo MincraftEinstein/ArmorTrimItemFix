@@ -1,8 +1,6 @@
 package einstein.armortrimitemfix;
 
-import einstein.armortrimitemfix.data.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.world.item.Item;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,7 +20,6 @@ public class ArmorTrimItemFixForge {
 
     void generateData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(generator.getPackOutput(), event.getExistingFileHelper()));
     }
 
     void clientSetup(FMLClientSetupEvent event) {
