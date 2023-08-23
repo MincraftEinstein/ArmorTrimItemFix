@@ -5,11 +5,6 @@ import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemOverride;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.resources.model.ModelBaker;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.models.ItemModelGenerators;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.Item;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -21,25 +16,6 @@ public class BlockModelMixin {
 
     @Redirect(method = "getItemOverrides", at = @At(value = "NEW", target = "(Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/renderer/block/model/BlockModel;Ljava/util/List;)Lnet/minecraft/client/renderer/block/model/ItemOverrides;"))
     private ItemOverrides getItemOverrides(ModelBaker baker, BlockModel model, List<ItemOverride> overrides) {
-        ResourceLocation modelLoc = ResourceLocation.tryParse(model.name);
-        if (modelLoc != null) {
-            String path = modelLoc.getPath();
-            ResourceLocation itemId = path.contains("/") ? new ResourceLocation(modelLoc.getNamespace(), path.substring(path.lastIndexOf("/") + 1)) : modelLoc;
-            Item item = BuiltInRegistries.ITEM.get(itemId);
-            if (item instanceof ArmorItem armor && ArmorTrimItemFix.TRIMMABLES.containsKey(armor)) {
-                overrides.clear();
-                for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
-                    String materialName = data.getName(item);
-                    ItemOverride.Predicate materialPredicate = new ItemOverride.Predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, data.propertyValue());
-                    overrides.add(new ItemOverride(ArmorTrimItemFix.vanillaOverrideName(itemId, materialName).withPrefix("item/"), List.of(materialPredicate)));
-
-                    ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, value) ->
-                            overrides.add(new ItemOverride(ArmorTrimItemFix.overrideName(itemId, pattern.getPath(), materialName).withPrefix("item/"), List.of(
-                                    new ItemOverride.Predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, value), materialPredicate))));
-                }
-            }
-        }
-
-        return new ItemOverrides(baker, model, overrides);
+        return new ItemOverrides(baker, model, ArmorTrimItemFix.createOverrides(model, overrides));
     }
 }

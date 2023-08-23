@@ -1,7 +1,13 @@
 package einstein.armortrimitemfix;
 
 import net.minecraft.Util;
+import net.minecraft.client.renderer.block.model.BlockModel;
+import net.minecraft.client.renderer.block.model.ItemOverride;
+import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.client.resources.model.ModelBaker;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -150,6 +156,29 @@ public class ArmorTrimItemFix {
     public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
         return map.entrySet().stream().sorted(Map.Entry.comparingByValue(comparator))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+    }
+
+    public static List<ItemOverride> createOverrides(BlockModel model, List<ItemOverride> overrides) {
+        ResourceLocation modelLoc = ResourceLocation.tryParse(model.name);
+        if (modelLoc != null) {
+            String path = modelLoc.getPath();
+            ResourceLocation itemId = path.contains("/") ? new ResourceLocation(modelLoc.getNamespace(), path.substring(path.lastIndexOf("/") + 1)) : modelLoc;
+            Item item = BuiltInRegistries.ITEM.get(itemId);
+            if (item instanceof ArmorItem armor && ArmorTrimItemFix.TRIMMABLES.containsKey(armor)) {
+                overrides.clear();
+                for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
+                    String materialName = data.getName(item);
+                    ItemOverride.Predicate materialPredicate = new ItemOverride.Predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, data.propertyValue());
+                    overrides.add(new ItemOverride(ArmorTrimItemFix.vanillaOverrideName(itemId, materialName).withPrefix("item/"), List.of(materialPredicate)));
+
+                    ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, value) ->
+                            overrides.add(new ItemOverride(ArmorTrimItemFix.overrideName(itemId, pattern.getPath(), materialName).withPrefix("item/"), List.of(
+                                    new ItemOverride.Predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, value), materialPredicate))));
+                }
+            }
+        }
+
+        return overrides;
     }
 
     public record MaterialData(String materialName, float propertyValue, ArmorMaterial armorMaterial,

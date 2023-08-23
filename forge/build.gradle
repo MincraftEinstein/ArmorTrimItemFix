@@ -13,6 +13,7 @@ mixin {
     add(sourceSets.main, "armortrimitemfix.refmap.json")
 
     config("armortrimitemfix.mixins.json")
+    config("armortrimitemfix.forge.mixins.json")
 }
 
 minecraft {
