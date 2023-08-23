@@ -43,7 +43,7 @@ public abstract class ModelBakeryMixin {
     private void init(BlockColors blockColors, ProfilerFiller filler, Map<ResourceLocation, BlockModel> modelResources, Map<ResourceLocation, List<ModelBakery.LoadedJson>> blockStateResources, CallbackInfo ci) {
         Map<ResourceLocation, BlockModel> models = new HashMap<>(modelResources);
         Map<ResourceLocation, BlockModel> topLevelModels = new HashMap<>();
-        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, type) -> {
+        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, prefix) -> {
             for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
                 for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                     ResourceLocation itemKey = BuiltInRegistries.ITEM.getKey(trimmable);
@@ -51,7 +51,7 @@ public abstract class ModelBakeryMixin {
                     ResourceLocation location = ModelBakery.MODEL_LISTER.idToFile(overrideName.withPrefix("item/"));
 
                     BlockModel model = new BlockModel(itemKey.withPrefix("item/"), List.of(),
-                            Map.of(ArmorTrimItemFix.getLayer(trimmable), Either.left(new Material(InventoryMenu.BLOCK_ATLAS, ArmorTrimItemFix.layerLoc(type, pattern.getPath(), data.getName(trimmable))))),
+                            Map.of(ArmorTrimItemFix.getLayer(trimmable), Either.left(new Material(InventoryMenu.BLOCK_ATLAS, ArmorTrimItemFix.layerLoc(prefix, pattern.getPath(), data.getName(trimmable))))),
                             null, null, ItemTransforms.NO_TRANSFORMS, List.of());
                     models.put(location, model);
                     this.modelResources = models;
