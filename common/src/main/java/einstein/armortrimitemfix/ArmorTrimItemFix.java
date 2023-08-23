@@ -139,6 +139,10 @@ public class ArmorTrimItemFix {
         return item == Items.LEATHER_HELMET || item == Items.LEATHER_CHESTPLATE || item == Items.LEATHER_LEGGINGS || item == Items.LEATHER_BOOTS;
     }
 
+    public static String getLayer(Item item) {
+        return "layer" + (isDoubleLayered(item) ? 2 : 1);
+    }
+
     public static ResourceLocation loc(String path) {
         return new ResourceLocation(MOD_ID, path);
     }

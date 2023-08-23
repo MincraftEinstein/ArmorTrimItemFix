@@ -2,8 +2,12 @@ package einstein.armortrimitemfix.mixin;
 
 import einstein.armortrimitemfix.ArmorTrimItemFix;
 import einstein.armortrimitemfix.ModifiableSpriteResourceLoader;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader;
 import net.minecraft.client.renderer.texture.atlas.SpriteSource;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.world.item.ArmorItem;
@@ -16,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Mixin(SpriteResourceLoader.class)
 public class SpriteResourceLoaderMixin implements ModifiableSpriteResourceLoader {
@@ -35,9 +40,9 @@ public class SpriteResourceLoaderMixin implements ModifiableSpriteResourceLoader
         if (atlas.equals(ArmorTrimItemFix.BLOCK_ATLAS)) {
             List<ResourceLocation> textures = new ArrayList<>();
 
-            for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
+            for (ResourceLocation holder : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                 for (ArmorItem.Type type : ArmorItem.Type.values()) {
-                    ResourceLocation texture = ArmorTrimItemFix.loc("trims/items/" + type.getName() + "_" + pattern.getPath() + "_trim");
+                    ResourceLocation texture = ArmorTrimItemFix.loc("trims/items/" + type.getName() + "_" + holder.getPath() + "_trim");
                     textures.add(texture);
                 }
             }

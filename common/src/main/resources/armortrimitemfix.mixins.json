@@ -5,6 +5,8 @@
   "refmap": "armortrimitemfix.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "BlockModelMixin",
+    "ModelBakeryMixin",
     "PalettedPermutationsInvoker",
     "SpriteResourceLoaderMixin"
   ],
