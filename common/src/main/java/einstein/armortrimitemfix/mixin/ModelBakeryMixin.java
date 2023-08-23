@@ -10,11 +10,9 @@ import net.minecraft.client.resources.model.ModelBakery;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.inventory.InventoryMenu;
-import net.minecraft.world.item.Item;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -46,8 +44,8 @@ public abstract class ModelBakeryMixin {
         Map<ResourceLocation, BlockModel> models = new HashMap<>(modelResources);
         Map<ResourceLocation, BlockModel> topLevelModels = new HashMap<>();
         ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, type) -> {
-            for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
-                for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
+            for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
+                for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                     ResourceLocation itemKey = BuiltInRegistries.ITEM.getKey(trimmable);
                     ResourceLocation overrideName = ArmorTrimItemFix.overrideName(itemKey, pattern.getPath(), data.getName(trimmable));
                     ResourceLocation location = ModelBakery.MODEL_LISTER.idToFile(overrideName.withPrefix("item/"));

@@ -27,11 +27,16 @@ public class BlockModelMixin {
             ResourceLocation itemId = path.contains("/") ? new ResourceLocation(modelLoc.getNamespace(), path.substring(path.lastIndexOf("/") + 1)) : modelLoc;
             Item item = BuiltInRegistries.ITEM.get(itemId);
             if (item instanceof ArmorItem armor && ArmorTrimItemFix.TRIMMABLES.containsKey(armor)) {
-                ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, value) -> {
-                    for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
-                        overrides.add(new ItemOverride(ArmorTrimItemFix.overrideName(itemId, pattern.getPath(), data.getName(item)).withPrefix("item/"), List.of(new ItemOverride.Predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, value), new ItemOverride.Predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, data.propertyValue()))));
-                    }
-                });
+                overrides.clear();
+                for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
+                    String materialName = data.getName(item);
+                    ItemOverride.Predicate materialPredicate = new ItemOverride.Predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, data.propertyValue());
+                    overrides.add(new ItemOverride(ArmorTrimItemFix.vanillaOverrideName(itemId, materialName).withPrefix("item/"), List.of(materialPredicate)));
+
+                    ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, value) ->
+                            overrides.add(new ItemOverride(ArmorTrimItemFix.overrideName(itemId, pattern.getPath(), materialName).withPrefix("item/"), List.of(
+                                    new ItemOverride.Predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, value), materialPredicate))));
+                }
             }
         }
 
