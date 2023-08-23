@@ -169,7 +169,8 @@ public class ArmorTrimItemFix {
                 for (ArmorTrimItemFix.MaterialData data : ArmorTrimItemFix.TRIM_MATERIALS) {
                     String materialName = data.getName(item);
                     ItemOverride.Predicate materialPredicate = new ItemOverride.Predicate(ItemModelGenerators.TRIM_TYPE_PREDICATE_ID, data.propertyValue());
-                    overrides.add(new ItemOverride(ArmorTrimItemFix.vanillaOverrideName(itemId, materialName).withPrefix("item/"), List.of(materialPredicate)));
+                    overrides.add(new ItemOverride(ArmorTrimItemFix.vanillaOverrideName(itemId, materialName).withPrefix("item/"), List.of(
+                            new ItemOverride.Predicate(ArmorTrimItemFix.TRIM_PATTERN_PREDICATE_ID, DEFAULT_TRIM_VALUE), materialPredicate)));
 
                     ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, value) ->
                             overrides.add(new ItemOverride(ArmorTrimItemFix.overrideName(itemId, pattern.getPath(), materialName).withPrefix("item/"), List.of(
