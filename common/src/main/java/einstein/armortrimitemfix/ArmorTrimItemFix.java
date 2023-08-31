@@ -2,6 +2,7 @@ package einstein.armortrimitemfix;
 
 import einstein.armortrimitemfix.api.TrimRegistry;
 import einstein.armortrimitemfix.compat.AbstractTrimCompat;
+import einstein.armortrimitemfix.compat.MinecraftCompat;
 import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemOverride;
@@ -42,61 +43,7 @@ public class ArmorTrimItemFix {
     }
 
     public static void clientSetup() {
-        TrimRegistry registry = TrimRegistry.INSTANCE;
-        registry.registerPattern(TrimPatterns.SENTRY.location());
-        registry.registerPattern(TrimPatterns.DUNE.location());
-        registry.registerPattern(TrimPatterns.COAST.location());
-        registry.registerPattern(TrimPatterns.WILD.location());
-        registry.registerPattern(TrimPatterns.WARD.location());
-        registry.registerPattern(TrimPatterns.EYE.location());
-        registry.registerPattern(TrimPatterns.VEX.location());
-        registry.registerPattern(TrimPatterns.TIDE.location());
-        registry.registerPattern(TrimPatterns.SNOUT.location());
-        registry.registerPattern(TrimPatterns.RIB.location());
-        registry.registerPattern(TrimPatterns.SPIRE.location());
-        registry.registerPattern(TrimPatterns.WAYFINDER.location());
-        registry.registerPattern(TrimPatterns.SHAPER.location());
-        registry.registerPattern(TrimPatterns.SILENCE.location());
-        registry.registerPattern(TrimPatterns.RAISER.location());
-        registry.registerPattern(TrimPatterns.HOST.location());
-
-        registry.registerMaterial(mcLoc("quartz"));
-        registry.registerMaterial(mcLoc("iron"), ArmorMaterials.IRON);
-        registry.registerMaterial(mcLoc("netherite"), ArmorMaterials.NETHERITE);
-        registry.registerMaterial(mcLoc("redstone"));
-        registry.registerMaterial(mcLoc("copper"));
-        registry.registerMaterial(mcLoc("gold"), ArmorMaterials.GOLD);
-        registry.registerMaterial(mcLoc("emerald"));
-        registry.registerMaterial(mcLoc("diamond"), ArmorMaterials.DIAMOND);
-        registry.registerMaterial(mcLoc("lapis"));
-        registry.registerMaterial(mcLoc("amethyst"));
-
-        registry.registerTrimmableItem(Items.LEATHER_HELMET);
-        registry.registerTrimmableItem(Items.LEATHER_CHESTPLATE);
-        registry.registerTrimmableItem(Items.LEATHER_LEGGINGS);
-        registry.registerTrimmableItem(Items.LEATHER_BOOTS);
-        registry.registerTrimmableItem(Items.CHAINMAIL_HELMET);
-        registry.registerTrimmableItem(Items.CHAINMAIL_CHESTPLATE);
-        registry.registerTrimmableItem(Items.CHAINMAIL_LEGGINGS);
-        registry.registerTrimmableItem(Items.CHAINMAIL_BOOTS);
-        registry.registerTrimmableItem(Items.IRON_HELMET);
-        registry.registerTrimmableItem(Items.IRON_CHESTPLATE);
-        registry.registerTrimmableItem(Items.IRON_LEGGINGS);
-        registry.registerTrimmableItem(Items.IRON_BOOTS);
-        registry.registerTrimmableItem(Items.GOLDEN_HELMET);
-        registry.registerTrimmableItem(Items.GOLDEN_CHESTPLATE);
-        registry.registerTrimmableItem(Items.GOLDEN_LEGGINGS);
-        registry.registerTrimmableItem(Items.GOLDEN_BOOTS);
-        registry.registerTrimmableItem(Items.DIAMOND_HELMET);
-        registry.registerTrimmableItem(Items.DIAMOND_CHESTPLATE);
-        registry.registerTrimmableItem(Items.DIAMOND_LEGGINGS);
-        registry.registerTrimmableItem(Items.DIAMOND_BOOTS);
-        registry.registerTrimmableItem(Items.NETHERITE_HELMET);
-        registry.registerTrimmableItem(Items.NETHERITE_CHESTPLATE);
-        registry.registerTrimmableItem(Items.NETHERITE_LEGGINGS);
-        registry.registerTrimmableItem(Items.NETHERITE_BOOTS);
-        registry.registerTrimmableItem(Items.TURTLE_HELMET);
-        
+        registerCompat("minecraft", MinecraftCompat::new);
         for (Item trimmable : ArmorTrimItemFix.TRIMMABLES.keySet()) {
             ArmorTrimItemFix.registerArmorTrimProperty(trimmable);
         }
@@ -163,10 +110,6 @@ public class ArmorTrimItemFix {
 
     public static ResourceLocation loc(String path) {
         return new ResourceLocation(MOD_ID, path);
-    }
-
-    public static ResourceLocation mcLoc(String path) {
-        return new ResourceLocation(path);
     }
 
     public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
