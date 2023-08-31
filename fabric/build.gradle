@@ -25,6 +25,7 @@ dependencies {
 
     modImplementation("com.terraformersmc:modmenu:${modmenu_version}")
     modImplementation("curse.maven:more-armor-trims-876103:${more_armor_trims_version}")
+    modImplementation("maven.modrinth:useful-slime:${fabric_usefulslime_version}")
 }
 
 loom {

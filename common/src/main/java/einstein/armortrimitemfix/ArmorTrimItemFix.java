@@ -3,7 +3,9 @@ package einstein.armortrimitemfix;
 import einstein.armortrimitemfix.api.TrimRegistry;
 import einstein.armortrimitemfix.compat.AbstractTrimCompat;
 import einstein.armortrimitemfix.compat.MinecraftCompat;
+import einstein.armortrimitemfix.compat.UsefulSlimeCompat;
 import einstein.armortrimitemfix.platform.Services;
+import einstein.usefulslime.UsefulSlime;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemOverride;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -44,6 +46,7 @@ public class ArmorTrimItemFix {
 
     public static void clientSetup() {
         registerCompat("minecraft", MinecraftCompat::new);
+        registerCompat(UsefulSlime.MOD_ID, UsefulSlimeCompat::new);
         for (Item trimmable : ArmorTrimItemFix.TRIMMABLES.keySet()) {
             ArmorTrimItemFix.registerArmorTrimProperty(trimmable);
         }
