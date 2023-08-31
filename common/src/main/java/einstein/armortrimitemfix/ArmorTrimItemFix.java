@@ -1,22 +1,22 @@
 package einstein.armortrimitemfix;
 
 import einstein.armortrimitemfix.api.TrimRegistry;
-import net.minecraft.Util;
+import einstein.armortrimitemfix.compat.AbstractTrimCompat;
+import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemOverride;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.armortrim.ArmorTrim;
 import net.minecraft.world.item.armortrim.TrimPatterns;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static net.minecraft.world.item.armortrim.ArmorTrim.TAG_TRIM_ID;
@@ -153,6 +153,12 @@ public class ArmorTrimItemFix {
 
     public static String getLayer(Item item) {
         return "layer" + (isDoubleLayered(item) ? 2 : 1);
+    }
+
+    public static <T extends AbstractTrimCompat> void registerCompat(String modId, Function<String, T> function) {
+        if (Services.PLATFORM.isModLoaded(modId)) {
+            function.apply(modId).init(TrimRegistry.INSTANCE);
+        }
     }
 
     public static ResourceLocation loc(String path) {
