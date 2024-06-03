@@ -32,7 +32,6 @@ You may not
 * Project pages include CurseForge, Modrinth, Planet Minecraft, GitHub
 ** Assets include logos, banners, textures, models etc
 ```
-</ul>
 </details>
 
 ![Example](https://i.imgur.com/9BG86Nc.png)
