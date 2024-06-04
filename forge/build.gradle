@@ -1,7 +1,8 @@
 plugins {
     id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
 
 base {
@@ -12,6 +13,8 @@ minecraft {
     mappings channel: 'official', version: minecraft_version
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    copyIdeResources = true
 
     runs {
         client {
@@ -41,7 +44,7 @@ minecraft {
         data {
             workingDirectory project.file('run')
             ideaModule "${rootProject.name}.${project.name}.main"
-            args '--mod', mod_id, '--server', '--client', '--dev', '--reports', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', project(":common").file('src/main/resources/')
             taskName 'Data'
             mods {
                 modDataRun {
@@ -67,8 +70,7 @@ tasks.withType(JavaCompile).configureEach {
 processResources {
     from project(":common").sourceSets.main.resources
 
-    exclude("armortrimitemfix.accesswidener")
-    exclude('.cache/')
+    exclude("${mod_id}.accesswidener")
 
     inputs.property("version", version)
 
