@@ -2,10 +2,12 @@ package einstein.armortrimitemfix;
 
 import net.minecraft.Util;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.Holder;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.armortrim.ArmorTrim;
+import net.minecraft.world.item.armortrim.TrimPattern;
 import net.minecraft.world.item.armortrim.TrimPatterns;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -92,14 +94,11 @@ public class ArmorTrimItemFix {
 
     public static void registerArmorTrimProperty(Item item) {
         ItemProperties.register(item, TRIM_PATTERN_PREDICATE_ID, (stack, level, entity, seed) -> {
-            CompoundTag tag = stack.getTag();
-            if (tag != null && tag.contains(ArmorTrim.TAG_TRIM_ID)) {
-                CompoundTag trimTag = tag.getCompound(ArmorTrim.TAG_TRIM_ID);
-                if (trimTag.contains("pattern")) {
-                    String pattern = trimTag.getString("pattern");
-                    Float value = TRIM_PATTERNS.get(ResourceLocation.tryParse(pattern));
-                    return value == null ? DEFAULT_TRIM_VALUE : value;
-                }
+            ArmorTrim tag = stack.get(DataComponents.TRIM);
+            if (tag != null) {
+                Holder<TrimPattern> pattern = tag.pattern();
+                Float value = TRIM_PATTERNS.get(pattern.unwrapKey().orElseThrow().location());
+                return value == null ? DEFAULT_TRIM_VALUE : value;
             }
             return 0;
         });
@@ -110,7 +109,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation vanillaOverrideName(ResourceLocation item, String materialName) {
-        return new ResourceLocation(item.getPath() + "_" + materialName + "_trim");
+        return ResourceLocation.tryParse(item.getPath() + "_" + materialName + "_trim");
     }
 
     public static ResourceLocation layerLoc(ArmorItem.Type armorType, String patternName, String materialName) {
@@ -122,7 +121,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation loc(String path) {
-        return new ResourceLocation(MOD_ID, path);
+        return ResourceLocation.tryBuild(MOD_ID, path);
     }
 
     public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
@@ -130,7 +129,7 @@ public class ArmorTrimItemFix {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
     }
 
-    public record MaterialData(String materialName, float propertyValue, ArmorMaterial armorMaterial,
+    public record MaterialData(String materialName, float propertyValue, Holder<ArmorMaterial> armorMaterial,
                                String overrideName) implements Comparable<MaterialData> {
 
         public MaterialData(String materialName, float propertyValue) {
@@ -138,7 +137,7 @@ public class ArmorTrimItemFix {
         }
 
         public String getName(Item item) {
-            if (item instanceof ArmorItem armorItem && armorMaterial != null && overrideName != null && armorItem.getMaterial() == armorMaterial) {
+            if (item instanceof ArmorItem armorItem && armorMaterial != null && overrideName != null && armorItem.getMaterial().is(armorMaterial.unwrapKey().orElseThrow())) {
                 return overrideName;
             }
             return materialName;
