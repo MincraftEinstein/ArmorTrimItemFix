@@ -7,7 +7,6 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.armortrim.ArmorTrim;
-import net.minecraft.world.item.armortrim.TrimPattern;
 import net.minecraft.world.item.armortrim.TrimPatterns;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
@@ -94,10 +93,9 @@ public class ArmorTrimItemFix {
 
     public static void registerArmorTrimProperty(Item item) {
         ItemProperties.register(item, TRIM_PATTERN_PREDICATE_ID, (stack, level, entity, seed) -> {
-            ArmorTrim tag = stack.get(DataComponents.TRIM);
-            if (tag != null) {
-                Holder<TrimPattern> pattern = tag.pattern();
-                Float value = TRIM_PATTERNS.get(pattern.unwrapKey().orElseThrow().location());
+            ArmorTrim trim = stack.get(DataComponents.TRIM);
+            if (trim != null) {
+                Float value = TRIM_PATTERNS.get(trim.pattern().unwrapKey().orElseThrow().location());
                 return value == null ? DEFAULT_TRIM_VALUE : value;
             }
             return 0;
@@ -109,7 +107,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation vanillaOverrideName(ResourceLocation item, String materialName) {
-        return ResourceLocation.tryParse(item.getPath() + "_" + materialName + "_trim");
+        return ResourceLocation.withDefaultNamespace(item.getPath() + "_" + materialName + "_trim");
     }
 
     public static ResourceLocation layerLoc(ArmorItem.Type armorType, String patternName, String materialName) {
@@ -121,7 +119,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation loc(String path) {
-        return ResourceLocation.tryBuild(MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
     public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
