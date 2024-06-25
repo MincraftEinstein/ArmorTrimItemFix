@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/netherite_boots",
+    "layer1": "armortrimitemfix:trims/items/boots_spire_trim_gold"
+  }
+}
