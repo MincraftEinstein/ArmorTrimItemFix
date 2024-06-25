@@ -63,7 +63,7 @@ public class ArmorTrimItemFix {
     });
     public static final Map<ResourceLocation, Float> TRIM_PATTERNS = createValueSortedMap(Util.make(new HashMap<>(), map -> {
         float f = 0;
-        float f1 = 1 / 17F; // 17 is the total number of trims
+        float f1 = 1 / 19F; // 19 is the total number of trims + 1
         map.put(TrimPatterns.SENTRY.location(), f += f1);
         map.put(TrimPatterns.DUNE.location(), f += f1);
         map.put(TrimPatterns.COAST.location(), f += f1);
@@ -81,6 +81,7 @@ public class ArmorTrimItemFix {
         map.put(TrimPatterns.RAISER.location(), f += f1);
         map.put(TrimPatterns.HOST.location(), f += f1);
         map.put(TrimPatterns.FLOW.location(), f += f1);
+        map.put(TrimPatterns.BOLT.location(), f += f1);
     }), Float::compareTo);
 
     public static void init() {
