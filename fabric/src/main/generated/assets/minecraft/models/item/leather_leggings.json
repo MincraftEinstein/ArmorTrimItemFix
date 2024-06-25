@@ -11,110 +11,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_quartz_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.1
@@ -130,110 +137,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_iron_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.2
@@ -249,110 +263,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_netherite_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_netherite_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_netherite_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.3
@@ -368,110 +389,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_redstone_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.4
@@ -487,110 +515,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_copper_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.5
@@ -606,110 +641,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_gold_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.6
@@ -725,110 +767,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_emerald_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.7
@@ -844,110 +893,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_diamond_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.8
@@ -963,110 +1019,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_lapis_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 0.9
@@ -1082,110 +1145,117 @@
     {
       "model": "armortrimitemfix:item/leather_leggings_sentry_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.0625,
+        "armortrimitemfix:trim_pattern": 0.05882353,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_dune_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.125,
+        "armortrimitemfix:trim_pattern": 0.11764706,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_coast_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.1875,
+        "armortrimitemfix:trim_pattern": 0.1764706,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wild_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.25,
+        "armortrimitemfix:trim_pattern": 0.23529412,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_ward_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3125,
+        "armortrimitemfix:trim_pattern": 0.29411766,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_eye_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.375,
+        "armortrimitemfix:trim_pattern": 0.3529412,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_vex_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.4375,
+        "armortrimitemfix:trim_pattern": 0.4117647,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_tide_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5,
+        "armortrimitemfix:trim_pattern": 0.47058824,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_snout_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5625,
+        "armortrimitemfix:trim_pattern": 0.5294118,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_rib_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.625,
+        "armortrimitemfix:trim_pattern": 0.5882353,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_spire_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6875,
+        "armortrimitemfix:trim_pattern": 0.64705884,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_wayfinder_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.75,
+        "armortrimitemfix:trim_pattern": 0.7058824,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_shaper_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8125,
+        "armortrimitemfix:trim_pattern": 0.7647059,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_silence_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.875,
+        "armortrimitemfix:trim_pattern": 0.8235294,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_raiser_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.9375,
+        "armortrimitemfix:trim_pattern": 0.88235295,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/leather_leggings_host_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9411765,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/leather_leggings_flow_amethyst_trim",
       "predicate": {
         "armortrimitemfix:trim_pattern": 1.0,
         "minecraft:trim_type": 1.0
