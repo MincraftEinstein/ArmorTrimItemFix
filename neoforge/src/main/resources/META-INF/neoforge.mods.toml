@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "${forge_loader_version_range}"
+loaderVersion = "${neoforge_loader_version_range}"
 license = "All right reserved"
 issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
 
@@ -8,22 +8,21 @@ issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
     version = "${version}"
     displayName = "Armor Trim Item Fix"
     #updateJSONURL="https://change.me.example.invalid/updates.json"
-    displayURL="https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix"
+    displayURL = "https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix"
     logoFile = "pack.png"
     authors = "${mod_author}"
-    displayTest = "IGNORE_ALL_VERSION"
     description = "${description}"
 
 [[dependencies.armortrimitemfix]]
-    modId = "forge"
-    mandatory = true
-    versionRange = "${forge_version}"
+    modId = "neoforge"
+    type = "required"
+    versionRange = "${neoforge_version}"
     ordering = "NONE"
     side = "CLIENT"
 
 [[dependencies.armortrimitemfix]]
     modId = "minecraft"
-    mandatory = true
+    type = "required"
     versionRange = "${minecraft_version_range}"
     ordering = "NONE"
     side = "CLIENT"
