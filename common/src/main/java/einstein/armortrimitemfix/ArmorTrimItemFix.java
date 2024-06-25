@@ -97,8 +97,7 @@ public class ArmorTrimItemFix {
         ItemProperties.register(item, TRIM_PATTERN_PREDICATE_ID, (stack, level, entity, seed) -> {
             ArmorTrim trim = stack.get(DataComponents.TRIM);
             if (trim != null) {
-                Float value = TRIM_PATTERNS.get(trim.pattern().unwrapKey().orElseThrow().location());
-                return value == null ? DEFAULT_TRIM_VALUE : value;
+                return TRIM_PATTERNS.getOrDefault(trim.pattern().unwrapKey().orElseThrow().location(), DEFAULT_TRIM_VALUE);
             }
             return 0;
         });

@@ -20,10 +20,10 @@
       "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
     ],
     "client": [
-      "einstein.armortrimitemfix.ArmorTrimItemFixClient"
+      "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
     ],
     "fabric-datagen": [
-      "einstein.armortrimitemfix.ArmorTrimItemFixData"
+      "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
     ]
   },
   "depends": {

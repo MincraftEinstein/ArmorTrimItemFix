@@ -12,14 +12,10 @@ public class ArmorTrimItemFixNeoForge {
 
     public ArmorTrimItemFixNeoForge(IEventBus eventBus) {
         ArmorTrimItemFix.init();
-        eventBus.addListener(this::clientSetup);
+        eventBus.addListener((FMLClientSetupEvent event) -> ArmorTrimItemFix.clientSetup());
         eventBus.addListener((GatherDataEvent event) -> {
             DataGenerator generator = event.getGenerator();
             generator.addProvider(event.includeClient(), new ModItemModelProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         });
-    }
-
-    void clientSetup(FMLClientSetupEvent event) {
-        ArmorTrimItemFix.clientSetup();
     }
 }
