@@ -3,7 +3,7 @@
   "id": "armortrimitemfix",
   "version": "${version}",
   "name": "Armor Trim Item Fix",
-  "description": "Trimmed armor items in Minecraft display one of four generic trim textures for every item, no matter what trim you put on an item the texture is always the same. This mod fixes that by adding more item trim textures that change depending on the trim applied",
+  "description": "${description}",
   "authors": [
     "MincraftEinstein"
   ],
@@ -27,15 +27,18 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.14",
+    "fabricloader": ">=0.15",
     "fabric": "*",
-    "minecraft": "1.21.x",
-    "java": ">=17"
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=${java_version}"
   },
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.gg/gSsaFAvrBM"
+        "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils",
+        "modmenu.discord": "https://discord.gg/gSsaFAvrBM",
+        "modmenu.kofi": "https://ko-fi.com/mincrafteinstein"
       }
     }
   }
