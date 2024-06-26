@@ -1,8 +1,11 @@
 package einstein.armortrimitemfix;
 
 import einstein.armortrimitemfix.data.ModItemModelProvider;
+import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -20,5 +23,10 @@ public class ArmorTrimItemFixForge {
             DataGenerator generator = event.getGenerator();
             generator.addProvider(event.includeClient(), new ModItemModelProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         });
+
+        if (Services.PLATFORM.isDevelopmentEnvironment()) {
+            MinecraftForge.EVENT_BUS.addListener((RegisterCommandsEvent event) ->
+                    ArmorTrimItemFix.registerDevCommand(event.getDispatcher(), event.getBuildContext(), event.getCommandSelection()));
+        }
     }
 }
