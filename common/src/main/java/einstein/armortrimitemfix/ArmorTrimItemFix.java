@@ -74,27 +74,33 @@ public class ArmorTrimItemFix {
         list.add(new MaterialData("amethyst", 1.0F));
     });
     public static final Map<ResourceLocation, Float> TRIM_PATTERNS = createValueSortedMap(Util.make(new HashMap<>(), map -> {
+        List<ResourceLocation> locations = Util.make(new ArrayList<>(), list -> {
+            list.add(TrimPatterns.SENTRY.location());
+            list.add(TrimPatterns.DUNE.location());
+            list.add(TrimPatterns.COAST.location());
+            list.add(TrimPatterns.WILD.location());
+            list.add(TrimPatterns.WARD.location());
+            list.add(TrimPatterns.EYE.location());
+            list.add(TrimPatterns.VEX.location());
+            list.add(TrimPatterns.TIDE.location());
+            list.add(TrimPatterns.SNOUT.location());
+            list.add(TrimPatterns.RIB.location());
+            list.add(TrimPatterns.SPIRE.location());
+            list.add(TrimPatterns.WAYFINDER.location());
+            list.add(TrimPatterns.SHAPER.location());
+            list.add(TrimPatterns.SILENCE.location());
+            list.add(TrimPatterns.RAISER.location());
+            list.add(TrimPatterns.HOST.location());
+            list.add(TrimPatterns.FLOW.location());
+            list.add(TrimPatterns.BOLT.location());
+        });
         float f = 0;
-        float f1 = 1 / 19F; // 19 is the total number of trims + 1
-        map.put(TrimPatterns.SENTRY.location(), f += f1);
-        map.put(TrimPatterns.DUNE.location(), f += f1);
-        map.put(TrimPatterns.COAST.location(), f += f1);
-        map.put(TrimPatterns.WILD.location(), f += f1);
-        map.put(TrimPatterns.WARD.location(), f += f1);
-        map.put(TrimPatterns.EYE.location(), f += f1);
-        map.put(TrimPatterns.VEX.location(), f += f1);
-        map.put(TrimPatterns.TIDE.location(), f += f1);
-        map.put(TrimPatterns.SNOUT.location(), f += f1);
-        map.put(TrimPatterns.RIB.location(), f += f1);
-        map.put(TrimPatterns.SPIRE.location(), f += f1);
-        map.put(TrimPatterns.WAYFINDER.location(), f += f1);
-        map.put(TrimPatterns.SHAPER.location(), f += f1);
-        map.put(TrimPatterns.SILENCE.location(), f += f1);
-        map.put(TrimPatterns.RAISER.location(), f += f1);
-        map.put(TrimPatterns.HOST.location(), f += f1);
-        map.put(TrimPatterns.FLOW.location(), f += f1);
-        map.put(TrimPatterns.BOLT.location(), f += f1);
-    }), Float::compareTo);
+        float f1 = 1F / (locations.size() + 1);
+
+        for (ResourceLocation location : locations) {
+            map.put(location, f += f1);
+        }
+    }), Float::compare);
 
     public static void init() {
     }
