@@ -17,7 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, armorType) -> {
+        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, trimmableData) -> {
             ResourceLocation trimmableKey = BuiltInRegistries.ITEM.getKey(trimmable);
             if (trimmableKey != null) {
                 ResourceLocation baseTexture = trimmableKey.withPrefix("item/");
@@ -41,8 +41,8 @@ public class ModItemModelProvider extends ItemModelProvider {
                     for (ResourceLocation pattern : ArmorTrimItemFix.TRIM_PATTERNS.keySet()) {
                         float patternValue = ArmorTrimItemFix.TRIM_PATTERNS.get(pattern);
                         String patternName = pattern.getPath();
-                        String name = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName).toString();
-                        ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(armorType, patternName, materialName);
+                        String name = ArmorTrimItemFix.overrideName(trimmableData, trimmableKey, patternName, materialName).toString();
+                        ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(trimmableData.type(), patternName, materialName);
                         ItemModelBuilder builder;
 
                         if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {

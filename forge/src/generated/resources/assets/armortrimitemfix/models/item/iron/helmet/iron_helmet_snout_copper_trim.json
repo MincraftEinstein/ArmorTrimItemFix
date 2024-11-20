@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/iron_helmet",
+    "layer1": "armortrimitemfix:trims/items/helmet/helmet_snout_trim_copper"
+  }
+}

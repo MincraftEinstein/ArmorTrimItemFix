@@ -34,32 +34,32 @@ public class ArmorTrimItemFix {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     public static final ResourceLocation TRIM_PATTERN_PREDICATE_ID = loc("trim_pattern");
     public static final float DEFAULT_TRIM_VALUE = 0.001F;
-    public static final Map<Item, ArmorItem.Type> TRIMMABLES = Util.make(new HashMap<>(), map -> {
-        map.put(Items.LEATHER_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.LEATHER_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.LEATHER_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.LEATHER_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.CHAINMAIL_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.CHAINMAIL_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.CHAINMAIL_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.CHAINMAIL_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.IRON_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.IRON_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.IRON_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.IRON_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.GOLDEN_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.GOLDEN_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.GOLDEN_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.GOLDEN_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.DIAMOND_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.DIAMOND_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.DIAMOND_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.DIAMOND_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.NETHERITE_HELMET, ArmorItem.Type.HELMET);
-        map.put(Items.NETHERITE_CHESTPLATE, ArmorItem.Type.CHESTPLATE);
-        map.put(Items.NETHERITE_LEGGINGS, ArmorItem.Type.LEGGINGS);
-        map.put(Items.NETHERITE_BOOTS, ArmorItem.Type.BOOTS);
-        map.put(Items.TURTLE_HELMET, ArmorItem.Type.HELMET);
+    public static final Map<Item, TrimmableData> TRIMMABLES = Util.make(new HashMap<>(), map -> {
+        map.put(Items.LEATHER_HELMET, new TrimmableData("leather", ArmorItem.Type.HELMET));
+        map.put(Items.LEATHER_CHESTPLATE, new TrimmableData("leather", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.LEATHER_LEGGINGS, new TrimmableData("leather", ArmorItem.Type.LEGGINGS));
+        map.put(Items.LEATHER_BOOTS, new TrimmableData("leather", ArmorItem.Type.BOOTS));
+        map.put(Items.CHAINMAIL_HELMET, new TrimmableData("chainmail", ArmorItem.Type.HELMET));
+        map.put(Items.CHAINMAIL_CHESTPLATE, new TrimmableData("chainmail", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.CHAINMAIL_LEGGINGS, new TrimmableData("chainmail", ArmorItem.Type.LEGGINGS));
+        map.put(Items.CHAINMAIL_BOOTS, new TrimmableData("chainmail", ArmorItem.Type.BOOTS));
+        map.put(Items.IRON_HELMET, new TrimmableData("iron", ArmorItem.Type.HELMET));
+        map.put(Items.IRON_CHESTPLATE, new TrimmableData("iron", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.IRON_LEGGINGS, new TrimmableData("iron", ArmorItem.Type.LEGGINGS));
+        map.put(Items.IRON_BOOTS, new TrimmableData("iron", ArmorItem.Type.BOOTS));
+        map.put(Items.GOLDEN_HELMET, new TrimmableData("golden", ArmorItem.Type.HELMET));
+        map.put(Items.GOLDEN_CHESTPLATE, new TrimmableData("golden", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.GOLDEN_LEGGINGS, new TrimmableData("golden", ArmorItem.Type.LEGGINGS));
+        map.put(Items.GOLDEN_BOOTS, new TrimmableData("golden", ArmorItem.Type.BOOTS));
+        map.put(Items.DIAMOND_HELMET, new TrimmableData("diamond", ArmorItem.Type.HELMET));
+        map.put(Items.DIAMOND_CHESTPLATE, new TrimmableData("diamond", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.DIAMOND_LEGGINGS, new TrimmableData("diamond", ArmorItem.Type.LEGGINGS));
+        map.put(Items.DIAMOND_BOOTS, new TrimmableData("diamond", ArmorItem.Type.BOOTS));
+        map.put(Items.NETHERITE_HELMET, new TrimmableData("netherite", ArmorItem.Type.HELMET));
+        map.put(Items.NETHERITE_CHESTPLATE, new TrimmableData("netherite", ArmorItem.Type.CHESTPLATE));
+        map.put(Items.NETHERITE_LEGGINGS, new TrimmableData("netherite", ArmorItem.Type.LEGGINGS));
+        map.put(Items.NETHERITE_BOOTS, new TrimmableData("netherite", ArmorItem.Type.BOOTS));
+        map.put(Items.TURTLE_HELMET, new TrimmableData("turtle", ArmorItem.Type.HELMET));
     });
     public static final TreeSet<MaterialData> TRIM_MATERIALS = Util.make(new TreeSet<>(), list -> {
         list.add(new MaterialData("quartz", 0.1F));
@@ -159,8 +159,8 @@ public class ArmorTrimItemFix {
         }));
     }
 
-    public static ResourceLocation overrideName(ResourceLocation item, String patternName, String materialName) {
-        return loc(item.getPath() + "_" + patternName + "_" + materialName + "_trim");
+    public static ResourceLocation overrideName(TrimmableData data, ResourceLocation item, String patternName, String materialName) {
+        return loc("item/" + data.armorMaterial() + "/" + data.type().getName() + "/" + item.getPath() + "_" + patternName + "_" + materialName + "_trim");
     }
 
     public static ResourceLocation vanillaOverrideName(ResourceLocation item, String materialName) {
@@ -168,7 +168,7 @@ public class ArmorTrimItemFix {
     }
 
     public static ResourceLocation layerLoc(ArmorItem.Type armorType, String patternName, String materialName) {
-        return loc("trims/items/" + armorType.getName() + "_" + patternName + "_trim_" + materialName);
+        return loc("trims/items/" + armorType.getName() + "/" + armorType.getName() + "_" + patternName + "_trim_" + materialName);
     }
 
     public static boolean isDoubleLayered(Item item) {
@@ -202,5 +202,9 @@ public class ArmorTrimItemFix {
         public int compareTo(@NotNull MaterialData o) {
             return Float.compare(propertyValue(), o.propertyValue());
         }
+    }
+
+    public record TrimmableData(String armorMaterial, ArmorItem.Type type) {
+
     }
 }

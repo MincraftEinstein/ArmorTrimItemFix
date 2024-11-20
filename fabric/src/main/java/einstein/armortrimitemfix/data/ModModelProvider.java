@@ -27,8 +27,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators generators) {
-        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, armorType) -> {
-            ResourceLocation trimmableKey = BuiltInRegistries.ITEM.getKey(trimmable).withPrefix("item/");
+        ArmorTrimItemFix.TRIMMABLES.forEach((trimmable, trimmableData) -> {
+            ResourceLocation itemkey = BuiltInRegistries.ITEM.getKey(trimmable);
+            ResourceLocation trimmableKey = itemkey.withPrefix("item/");
             if (trimmableKey != null) {
                 JsonArray overrides = new JsonArray();
 
@@ -40,8 +41,8 @@ public class ModModelProvider extends FabricModelProvider {
 
                     ArmorTrimItemFix.TRIM_PATTERNS.forEach((pattern, patternValue) -> {
                         String patternName = pattern.getPath();
-                        ResourceLocation overrideName = ArmorTrimItemFix.overrideName(trimmableKey, patternName, materialName);
-                        ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(armorType, patternName, materialName);
+                        ResourceLocation overrideName = ArmorTrimItemFix.overrideName(trimmableData, itemkey, patternName, materialName);
+                        ResourceLocation layerLoc = ArmorTrimItemFix.layerLoc(trimmableData.type(), patternName, materialName);
 
                         if (ArmorTrimItemFix.isDoubleLayered(trimmable)) {
                             generators.generateLayeredItem(overrideName, trimmableKey, trimmableKey.withSuffix("_overlay"), layerLoc);

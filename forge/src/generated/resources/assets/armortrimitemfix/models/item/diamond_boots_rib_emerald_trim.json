@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/diamond_boots",
-    "layer1": "armortrimitemfix:trims/items/boots_rib_trim_emerald"
-  }
-}
