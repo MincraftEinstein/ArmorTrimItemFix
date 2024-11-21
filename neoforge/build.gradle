@@ -47,5 +47,5 @@ neoForge {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
-    implementation("maven.modrinth:more-armor-trims:${neoforge_more_trims_version}")
+    compileOnly("maven.modrinth:more-armor-trims:${neoforge_more_trims_version}")
 }
