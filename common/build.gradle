@@ -16,6 +16,7 @@ neoForge {
 
 dependencies {
     compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    compileOnly group: 'maven.modrinth', name: 'more-armor-trims', version: "${neoforge_more_trims_version}"
 }
 
 configurations {

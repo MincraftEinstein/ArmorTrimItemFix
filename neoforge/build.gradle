@@ -34,6 +34,7 @@ neoForge {
         data {
             data()
             programArguments.addAll '--mod', project.mod_id, '--server', '--client', '--dev', '--reports', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', project.project(":common").file('src/main/resources/').getAbsolutePath()
+        }
     }
 
     mods {
@@ -44,3 +45,7 @@ neoForge {
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+dependencies {
+    implementation("maven.modrinth:more-armor-trims:${neoforge_more_trims_version}")
+}

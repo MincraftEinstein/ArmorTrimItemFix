@@ -11,126 +11,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.1
       }
     },
@@ -144,126 +214,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.2
       }
     },
@@ -277,126 +417,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.3
       }
     },
@@ -410,126 +620,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.4
       }
     },
@@ -543,126 +823,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.5
       }
     },
@@ -676,126 +1026,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.6
       }
     },
@@ -809,126 +1229,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.7
       }
     },
@@ -942,126 +1432,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.8
       }
     },
@@ -1075,126 +1635,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.9
       }
     },
@@ -1208,126 +1838,196 @@
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_sentry_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_dune_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_coast_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wild_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ward_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_eye_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_vex_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_tide_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_snout_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_rib_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_spire_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wayfinder_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_shaper_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_silence_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_raiser_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_host_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_flow_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_bolt_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_storm_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_ram_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_myth_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_greed_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_beast_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_fever_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_wraith_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_nihility_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_horizon_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/leggings/netherite_leggings_origin_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 1.0
       }
     }

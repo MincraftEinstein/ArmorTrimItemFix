@@ -11,126 +11,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.1
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_quartz_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.1
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_quartz_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.1
       }
     },
@@ -144,126 +214,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.2
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_iron_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.2
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_iron_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.2
       }
     },
@@ -277,126 +417,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.3
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_netherite_darker_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.3
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_netherite_darker_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.3
       }
     },
@@ -410,126 +620,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.4
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_redstone_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.4
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_redstone_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.4
       }
     },
@@ -543,126 +823,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.5
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_copper_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.5
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_copper_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.5
       }
     },
@@ -676,126 +1026,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.6
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_gold_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.6
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_gold_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.6
       }
     },
@@ -809,126 +1229,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.7
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_emerald_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.7
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_emerald_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.7
       }
     },
@@ -942,126 +1432,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.8
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_diamond_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.8
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_diamond_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.8
       }
     },
@@ -1075,126 +1635,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 0.9
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_lapis_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 0.9
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_lapis_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 0.9
       }
     },
@@ -1208,126 +1838,196 @@
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_sentry_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.05263158,
+        "armortrimitemfix:trim_pattern": 0.03448276,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_dune_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.10526316,
+        "armortrimitemfix:trim_pattern": 0.06896552,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_coast_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.15789473,
+        "armortrimitemfix:trim_pattern": 0.10344827,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wild_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.21052632,
+        "armortrimitemfix:trim_pattern": 0.13793103,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ward_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.2631579,
+        "armortrimitemfix:trim_pattern": 0.1724138,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_eye_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.3157895,
+        "armortrimitemfix:trim_pattern": 0.20689656,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_vex_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.36842108,
+        "armortrimitemfix:trim_pattern": 0.24137932,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_tide_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.42105266,
+        "armortrimitemfix:trim_pattern": 0.27586207,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_snout_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.47368425,
+        "armortrimitemfix:trim_pattern": 0.31034482,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_rib_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.5263158,
+        "armortrimitemfix:trim_pattern": 0.34482756,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_spire_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.57894737,
+        "armortrimitemfix:trim_pattern": 0.3793103,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wayfinder_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6315789,
+        "armortrimitemfix:trim_pattern": 0.41379306,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_shaper_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.6842105,
+        "armortrimitemfix:trim_pattern": 0.4482758,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_silence_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.73684204,
+        "armortrimitemfix:trim_pattern": 0.48275855,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_raiser_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.7894736,
+        "armortrimitemfix:trim_pattern": 0.5172413,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_host_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.84210515,
+        "armortrimitemfix:trim_pattern": 0.5517241,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_flow_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.8947367,
+        "armortrimitemfix:trim_pattern": 0.58620685,
         "minecraft:trim_type": 1.0
       }
     },
     {
       "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_bolt_amethyst_trim",
       "predicate": {
-        "armortrimitemfix:trim_pattern": 0.94736826,
+        "armortrimitemfix:trim_pattern": 0.62068963,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_storm_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6551724,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_ram_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.6896552,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_myth_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.72413796,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_greed_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.75862074,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_beast_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.7931035,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_fever_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8275863,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_wraith_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.8620691,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_nihility_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.89655185,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_horizon_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9310346,
+        "minecraft:trim_type": 1.0
+      }
+    },
+    {
+      "model": "armortrimitemfix:item/netherite/chestplate/netherite_chestplate_origin_amethyst_trim",
+      "predicate": {
+        "armortrimitemfix:trim_pattern": 0.9655174,
         "minecraft:trim_type": 1.0
       }
     }

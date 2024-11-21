@@ -93,6 +93,16 @@ public class ArmorTrimItemFix {
             list.add(TrimPatterns.HOST.location());
             list.add(TrimPatterns.FLOW.location());
             list.add(TrimPatterns.BOLT.location());
+            list.add(moreArmorTrimsLoc("storm"));
+            list.add(moreArmorTrimsLoc("ram"));
+            list.add(moreArmorTrimsLoc("myth"));
+            list.add(moreArmorTrimsLoc("greed"));
+            list.add(moreArmorTrimsLoc("beast"));
+            list.add(moreArmorTrimsLoc("fever"));
+            list.add(moreArmorTrimsLoc("wraith"));
+            list.add(moreArmorTrimsLoc("nihility"));
+            list.add(moreArmorTrimsLoc("horizon"));
+            list.add(moreArmorTrimsLoc("origin"));
         });
         float f = 0;
         float f1 = 1F / (locations.size() + 1);
@@ -177,6 +187,10 @@ public class ArmorTrimItemFix {
 
     public static ResourceLocation loc(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    private static ResourceLocation moreArmorTrimsLoc(String path) {
+        return ResourceLocation.fromNamespaceAndPath("more_armor_trims", path);
     }
 
     public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
