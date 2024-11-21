@@ -35,5 +35,14 @@ loom {
             ideConfigGenerated(true)
             runDir('runs/server')
         }
+        data {
+            inherit client
+            setConfigName("Fabric Data")
+            ideConfigGenerated(true)
+            vmArg "-Dfabric-api.datagen"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+            vmArg "-Dfabric-api.datagen.modid=${mod_id}"
+            runDir("runs/data")
+        }
     }
 }
