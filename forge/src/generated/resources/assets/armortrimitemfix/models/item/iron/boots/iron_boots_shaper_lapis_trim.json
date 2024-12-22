@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/iron_boots",
+    "layer1": "armortrimitemfix:trims/items/boots/boots_shaper_trim_lapis"
+  }
+}

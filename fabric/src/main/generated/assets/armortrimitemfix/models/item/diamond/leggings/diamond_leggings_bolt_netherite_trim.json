@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/diamond_leggings",
-    "layer1": "armortrimitemfix:trims/items/leggings/leggings_bolt_trim_netherite"
-  }
-}
