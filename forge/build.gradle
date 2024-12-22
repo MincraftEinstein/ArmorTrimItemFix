@@ -1,0 +1,101 @@
+plugins {
+    id 'idea'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle'
+    id 'org.spongepowered.mixin'
+}
+
+base {
+    archivesName = "${mod_name}-forge-${minecraft_version}"
+}
+
+minecraft {
+    mappings channel: 'official', version: minecraft_version
+
+    accessTransformer = project(":common").file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory project.file('runs/client')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Client'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modClientRun {
+                    source sourceSets.main
+                    source project(":common").sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('runs/server')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            taskName 'Server'
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+            mods {
+                modServerRun {
+                    source sourceSets.main
+                    source project(":common").sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory file('runs/data')
+            ideaModule "${rootProject.name}.${project.name}.main"
+            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', mod_id, '--client', ' --dev', ' --reports', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            taskName 'Data'
+            mods {
+                modDataRun {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+repositories {
+    maven {
+        url = "https://thedarkcolour.github.io/KotlinForForge/"
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    compileOnly project(":common")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    source(project(":common").sourceSets.main.allSource)
+}
+
+processResources {
+    from project(":common").sourceSets.main.resources
+
+    exclude("subtle_effects.accesswidener")
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId base.archivesName.get()
+            from components.java
+            fg.component(it)
+        }
+    }
+    repositories {
+        maven {
+            url "file://" + System.getenv("local_maven")
+        }
+    }
+}

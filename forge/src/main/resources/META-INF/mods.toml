@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "${neoforge_loader_version_range}"
+loaderVersion = "${forge_loader_version_range}"
 license = "All right reserved"
 issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
 
@@ -12,17 +12,18 @@ issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
     logoFile = "pack.png"
     authors = "${mod_author}"
     description = "${description}"
+    displayTest = "IGNORE_ALL_VERSION"
 
 [[dependencies.armortrimitemfix]]
-    modId = "neoforge"
-    type = "required"
-    versionRange = "${neoforge_version}"
+    modId = "forge"
+    mandatory = true
+    versionRange = "${forge_version}"
     ordering = "NONE"
     side = "CLIENT"
 
 [[dependencies.armortrimitemfix]]
     modId = "minecraft"
-    type = "required"
+    mandatory = true
     versionRange = "[${minecraft_version}, ${max_minecraft_version})"
     ordering = "NONE"
     side = "CLIENT"
