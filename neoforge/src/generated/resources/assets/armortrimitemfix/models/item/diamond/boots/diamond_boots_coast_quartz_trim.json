@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/diamond_boots",
-    "layer1": "armortrimitemfix:trims/items/boots/boots_coast_trim_quartz"
-  }
-}

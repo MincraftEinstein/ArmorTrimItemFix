@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/golden_boots",
-    "layer1": "armortrimitemfix:trims/items/boots/boots_nihility_trim_iron"
-  }
-}

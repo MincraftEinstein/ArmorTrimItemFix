@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:item/golden_chestplate",
-    "layer1": "armortrimitemfix:trims/items/chestplate/chestplate_ward_trim_amethyst"
-  }
-}
