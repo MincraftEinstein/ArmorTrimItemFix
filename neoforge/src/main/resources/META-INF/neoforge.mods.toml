@@ -13,6 +13,9 @@ issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
     authors = "${mod_author}"
     description = "${description}"
 
+[[mixins]]
+    config = "${mod_id}.mixins.json"
+
 [[dependencies.armortrimitemfix]]
     modId = "neoforge"
     type = "required"

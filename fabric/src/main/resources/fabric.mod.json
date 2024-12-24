@@ -26,6 +26,9 @@
       "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
     ]
   },
+  "mixins": [
+    "armortrimitemfix.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${fabric_version}",
     "fabric-api": ">=${fabric_api_version}",
