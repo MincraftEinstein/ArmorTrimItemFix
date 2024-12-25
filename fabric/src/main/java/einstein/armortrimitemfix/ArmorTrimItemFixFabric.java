@@ -4,10 +4,8 @@ import einstein.armortrimitemfix.platform.Services;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class ArmorTrimItemFixFabric implements ModInitializer, ClientModInitializer, DataGeneratorEntrypoint {
+public class ArmorTrimItemFixFabric implements ModInitializer, ClientModInitializer {
 
     @Override
     public void onInitialize() {
@@ -21,10 +19,5 @@ public class ArmorTrimItemFixFabric implements ModInitializer, ClientModInitiali
     @Override
     public void onInitializeClient() {
         ArmorTrimItemFix.clientSetup();
-    }
-
-    @Override
-    public void onInitializeDataGenerator(FabricDataGenerator generator) {
-//        generator.createPack().addProvider(ModModelProvider::new);
     }
 }

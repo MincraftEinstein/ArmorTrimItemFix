@@ -6,7 +6,8 @@
   "compatibilityLevel": "JAVA_17",
   "client": [
     "ModelManagerMixin",
-    "SelectItemModelPropertiesMixin"
+    "SelectItemModelPropertiesMixin",
+    "SpriteSourceListMixin"
   ],
   "injectors": {
     "defaultRequire": 1

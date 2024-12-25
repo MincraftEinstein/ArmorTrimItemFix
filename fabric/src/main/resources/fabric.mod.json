@@ -26,6 +26,7 @@
       "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
     ]
   },
+  "accessWidener": "armortrimitemfix.accesswidener",
   "mixins": [
     "armortrimitemfix.mixins.json"
   ],

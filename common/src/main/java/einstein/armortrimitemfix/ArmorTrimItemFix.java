@@ -41,6 +41,8 @@ public class ArmorTrimItemFix {
     public static final String MOD_ID = "armortrimitemfix";
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
+    public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace("trims/color_palettes/trim_palette");
+    public static final ResourceLocation BLOCKS_ATLAS = ResourceLocation.withDefaultNamespace("blocks");
     public static final Map<Item, TrimmableData> TRIMMABLES = Util.make(new HashMap<>(), map -> {
         map.put(Items.LEATHER_HELMET, new TrimmableData("leather", ArmorType.HELMET, EquipmentAssets.LEATHER,
                 Util.make(new Int2ObjectArrayMap<>(), layerMap ->
@@ -81,6 +83,12 @@ public class ArmorTrimItemFix {
     });
     public static final List<MaterialData> TRIM_MATERIALS = Util.make(new ArrayList<>(), list -> {
         list.add(new MaterialData(TrimMaterials.DIAMOND, Map.of(EquipmentAssets.DIAMOND, "diamond_darker")));
+    });
+    public static final List<ArmorType> ARMOR_TYPES = Util.make(new ArrayList<>(), list -> {
+        list.add(ArmorType.HELMET);
+        list.add(ArmorType.CHESTPLATE);
+        list.add(ArmorType.LEGGINGS);
+        list.add(ArmorType.BOOTS);
     });
 
     public static void init() {
