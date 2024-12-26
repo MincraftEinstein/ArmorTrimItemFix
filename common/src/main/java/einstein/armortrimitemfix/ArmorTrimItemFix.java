@@ -53,9 +53,6 @@ public class ArmorTrimItemFix {
     public static void init() {
     }
 
-    public static void clientSetup() {
-    }
-
     public static void registerDevCommand(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext buildContext, Commands.CommandSelection selection) {
         dispatcher.register(Commands.literal("spawnArmorTrimItemFrames").executes(context -> {
             CommandSourceStack source = context.getSource();

@@ -12,7 +12,6 @@ public class ArmorTrimItemFixNeoForge {
 
     public ArmorTrimItemFixNeoForge(IEventBus eventBus) {
         ArmorTrimItemFix.init();
-        eventBus.addListener((FMLClientSetupEvent event) -> ArmorTrimItemFix.clientSetup());
 
         if (Services.PLATFORM.isDevelopmentEnvironment()) {
             NeoForge.EVENT_BUS.addListener((RegisterCommandsEvent event) ->

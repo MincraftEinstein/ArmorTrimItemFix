@@ -5,7 +5,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
-public class ArmorTrimItemFixFabric implements ModInitializer, ClientModInitializer {
+public class ArmorTrimItemFixFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
@@ -14,10 +14,5 @@ public class ArmorTrimItemFixFabric implements ModInitializer, ClientModInitiali
         if (Services.PLATFORM.isDevelopmentEnvironment()) {
             CommandRegistrationCallback.EVENT.register(ArmorTrimItemFix::registerDevCommand);
         }
-    }
-
-    @Override
-    public void onInitializeClient() {
-        ArmorTrimItemFix.clientSetup();
     }
 }
