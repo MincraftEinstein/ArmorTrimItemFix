@@ -9,13 +9,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 
 import java.util.List;
+import java.util.Optional;
 
-public record TrimmableItemData(Item item, EquipmentType type, ResourceLocation material, List<TextureLayer> layers, List<ItemTintSource> tintSources) {
+public record TrimmableItemData(Item item, EquipmentType type, Optional<ResourceLocation> overrideMaterial, List<TextureLayer> layers, List<ItemTintSource> tintSources) {
 
     public static final Codec<TrimmableItemData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(TrimmableItemData::item),
             EquipmentType.CODEC.fieldOf("type").forGetter(TrimmableItemData::type),
-            ResourceLocation.CODEC.fieldOf("override_material").forGetter(TrimmableItemData::material),
+            ResourceLocation.CODEC.optionalFieldOf("override_material").forGetter(TrimmableItemData::overrideMaterial),
             Codec.list(TextureLayer.CODEC).optionalFieldOf("layers", List.of()).forGetter(TrimmableItemData::layers),
             Codec.list(ItemTintSources.CODEC).optionalFieldOf("tints", List.of()).forGetter(TrimmableItemData::tintSources)
     ).apply(instance, TrimmableItemData::new));

@@ -46,43 +46,9 @@ public class ArmorTrimItemFix {
     public static final String MOD_ID = "armortrimitemfix";
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
-    public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace("trims/color_palettes/trim_palette");
+    public static final String PALETTES_DIRECTORY = "trims/color_palettes/";
+    public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
     public static final ResourceLocation BLOCKS_ATLAS = ResourceLocation.withDefaultNamespace("blocks");
-//    public static final Map<Item, TrimmableData> TRIMMABLES = Util.make(new HashMap<>(), map -> {
-//        map.put(Items.LEATHER_HELMET, new TrimmableData("leather", ArmorType.HELMET, EquipmentAssets.LEATHER,
-//                Util.make(new Int2ObjectArrayMap<>(), layerMap ->
-//                        layerMap.put(1, ResourceLocation.withDefaultNamespace("item/leather_helmet_overlay"))), List.of(new Dye(-6265536))));
-//        map.put(Items.LEATHER_CHESTPLATE, new TrimmableData("leather", ArmorType.CHESTPLATE, EquipmentAssets.LEATHER,
-//                Util.make(new Int2ObjectArrayMap<>(), layerMap ->
-//                        layerMap.put(1, ResourceLocation.withDefaultNamespace("item/leather_chestplate_overlay"))), List.of(new Dye(-6265536))));
-//        map.put(Items.LEATHER_LEGGINGS, new TrimmableData("leather", ArmorType.LEGGINGS, EquipmentAssets.LEATHER,
-//                Util.make(new Int2ObjectArrayMap<>(), layerMap ->
-//                        layerMap.put(1, ResourceLocation.withDefaultNamespace("item/leather_leggings_overlay"))), List.of(new Dye(-6265536))));
-//        map.put(Items.LEATHER_BOOTS, new TrimmableData("leather", ArmorType.BOOTS, EquipmentAssets.LEATHER,
-//                Util.make(new Int2ObjectArrayMap<>(), layerMap ->
-//                        layerMap.put(1, ResourceLocation.withDefaultNamespace("item/leather_boots_overlay"))), List.of(new Dye(-6265536))));
-//        map.put(Items.CHAINMAIL_HELMET, new TrimmableData("chainmail", ArmorType.HELMET));
-//        map.put(Items.CHAINMAIL_CHESTPLATE, new TrimmableData("chainmail", ArmorType.CHESTPLATE));
-//        map.put(Items.CHAINMAIL_LEGGINGS, new TrimmableData("chainmail", ArmorType.LEGGINGS));
-//        map.put(Items.CHAINMAIL_BOOTS, new TrimmableData("chainmail", ArmorType.BOOTS));
-//        map.put(Items.IRON_HELMET, new TrimmableData("iron", ArmorType.HELMET));
-//        map.put(Items.IRON_CHESTPLATE, new TrimmableData("iron", ArmorType.CHESTPLATE, EquipmentAssets.IRON));
-//        map.put(Items.IRON_LEGGINGS, new TrimmableData("iron", ArmorType.LEGGINGS));
-//        map.put(Items.IRON_BOOTS, new TrimmableData("iron", ArmorType.BOOTS));
-//        map.put(Items.GOLDEN_HELMET, new TrimmableData("golden", ArmorType.HELMET));
-//        map.put(Items.GOLDEN_CHESTPLATE, new TrimmableData("golden", ArmorType.CHESTPLATE));
-//        map.put(Items.GOLDEN_LEGGINGS, new TrimmableData("golden", ArmorType.LEGGINGS));
-//        map.put(Items.GOLDEN_BOOTS, new TrimmableData("golden", ArmorType.BOOTS));
-//        map.put(Items.DIAMOND_HELMET, new TrimmableData("diamond", ArmorType.HELMET));
-//        map.put(Items.DIAMOND_CHESTPLATE, new TrimmableData("diamond", ArmorType.CHESTPLATE, EquipmentAssets.DIAMOND));
-//        map.put(Items.DIAMOND_LEGGINGS, new TrimmableData("diamond", ArmorType.LEGGINGS));
-//        map.put(Items.DIAMOND_BOOTS, new TrimmableData("diamond", ArmorType.BOOTS));
-//        map.put(Items.NETHERITE_HELMET, new TrimmableData("netherite", ArmorType.HELMET));
-//        map.put(Items.NETHERITE_CHESTPLATE, new TrimmableData("netherite", ArmorType.CHESTPLATE));
-//        map.put(Items.NETHERITE_LEGGINGS, new TrimmableData("netherite", ArmorType.LEGGINGS));
-//        map.put(Items.NETHERITE_BOOTS, new TrimmableData("netherite", ArmorType.BOOTS));
-//        map.put(Items.TURTLE_HELMET, new TrimmableData("turtle", ArmorType.HELMET));
-//    });
 
     public static void init() {
     }
@@ -102,6 +68,8 @@ public class ArmorTrimItemFix {
             BlockPos.MutableBlockPos pos = playerPos.mutable();
             int[] zOffset = {pos.getZ()};
 
+            // I know this is bad code since the list is loaded from a resource pack, but it works,
+            // so I don't care, because this is a development command
             TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach(data -> {
                 if ((pos.getX() - playerPos.getX()) >= (materialRegistry.size() + 1) * 5) { // 5 is the number of rows
                     zOffset[0] = pos.getZ() + patternRegistry.size() + 1;
@@ -129,46 +97,11 @@ public class ArmorTrimItemFix {
         }));
     }
 
-    public static ResourceLocation overrideName(TrimmableData data, ResourceLocation item, String patternName, String materialName) {
-        return loc("item/" + data.armorMaterial() + "/" + data.type().getName() + "/" + item.getPath() + "_" + patternName + "_" + materialName + "_trim");
-    }
-
-    public static ResourceLocation vanillaOverrideName(ResourceLocation item, String materialName) {
-        return ResourceLocation.withDefaultNamespace(item.getPath() + "_" + materialName + "_trim");
-    }
-
-    public static ResourceLocation layerLoc(EquipmentType type, String patternName, String materialName) {
-        return loc("trims/items/" + type.getSerializedName() + "/" + type.getSerializedName() + "_" + patternName + "_trim_" + materialName);
-    }
-
-    public static boolean isDoubleLayered(Item item) {
-        return item == Items.LEATHER_HELMET || item == Items.LEATHER_CHESTPLATE || item == Items.LEATHER_LEGGINGS || item == Items.LEATHER_BOOTS;
-    }
-
     public static ResourceLocation loc(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
-    private static ResourceLocation moreArmorTrimsLoc(String path) {
-        return ResourceLocation.fromNamespaceAndPath("more_armor_trims", path);
-    }
-
-    public static <K, V> Map<K, V> createValueSortedMap(Map<K, V> map, Comparator<V> comparator) {
-        return map.entrySet().stream().sorted(Map.Entry.comparingByValue(comparator))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-    }
-
     public static FileToIdConverter createLister(String directory) {
         return FileToIdConverter.json(MOD_ID + "/" + directory);
-    }
-
-    public record TrimmableData(String armorMaterial, ArmorType type,
-                                @Nullable ResourceKey<EquipmentAsset> equipmentAsset,
-                                Int2ObjectMap<ResourceLocation> layersTextures,
-                                List<ItemTintSource> tintSources) {
-
-        public TrimmableData(String armorMaterial, ArmorType type, ResourceKey<EquipmentAsset> equipmentAsset) {
-            this(armorMaterial, type, equipmentAsset, new Int2ObjectArrayMap<>(), List.of());
-        }
     }
 }

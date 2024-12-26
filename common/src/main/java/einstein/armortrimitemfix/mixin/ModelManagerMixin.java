@@ -33,12 +33,14 @@ public class ModelManagerMixin {
             ItemModel.Unbaked fallbackModel = contents.remove(id).model();
             List<TrimmableItemData.TextureLayer> layersTextures = itemData.layers();
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
+            String equipmentName = itemData.type().getSerializedName();
 
             TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
                 ResourceLocation patternId = patternData.pattern();
+                String patternName = patternId.getPath();
                 TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
-                    String materialName = materialData.getName(itemData.material());
-                    ResourceLocation modelId = ArmorTrimItemFix.loc("item/" + id.getPath() + "_" + patternId.getPath() + "_" + materialName + "_trim");
+                    String materialName = materialData.getName(itemData.overrideMaterial().orElse(null));
+                    ResourceLocation modelId = ArmorTrimItemFix.loc("item/" + id.getPath() + "_" + patternName + "_" + materialName + "_trim");
                     TextureSlots.Data.Builder builder = new TextureSlots.Data.Builder();
 
                     final int[] i = {0};
@@ -53,7 +55,7 @@ public class ModelManagerMixin {
                     });
 
                     i[0]++;
-                    builder.addTexture("layer" + i[0], new Material(TextureAtlas.LOCATION_BLOCKS, ArmorTrimItemFix.layerLoc(itemData.type(), patternId.getPath(), materialName)));
+                    builder.addTexture("layer" + i[0], new Material(TextureAtlas.LOCATION_BLOCKS, ArmorTrimItemFix.loc("trims/items/" + equipmentName + "/" + equipmentName + "_" + patternName + "_trim_" + materialName)));
                     map.put(modelId, new BlockModel(ResourceLocation.withDefaultNamespace("item/generated"), List.of(), builder.build(), null, null, null));
                     cases.add(new SelectItemModel.SwitchCase<>(List.of(new ArmorTrimProperty.Data(patternId, materialData.materialId())), new BlockModelWrapper.Unbaked(modelId, itemData.tintSources())));
                 });

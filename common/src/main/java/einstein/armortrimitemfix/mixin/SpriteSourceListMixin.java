@@ -30,9 +30,9 @@ public class SpriteSourceListMixin {
 
             TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
                 ResourceLocation materialId = materialData.materialId();
-                permutations.put(materialId.getPath(), materialId.withPrefix("trims/color_palettes/"));
+                permutations.put(materialId.getPath(), materialId.withPrefix(ArmorTrimItemFix.PALETTES_DIRECTORY));
                 materialData.overrides().forEach((equipmentAsset, overrideName) -> {
-                    permutations.put(overrideName, ResourceLocation.fromNamespaceAndPath(materialId.getNamespace(), "trims/color_palettes/" + overrideName));
+                    permutations.put(overrideName, ResourceLocation.fromNamespaceAndPath(materialId.getNamespace(), ArmorTrimItemFix.PALETTES_DIRECTORY + overrideName));
                 });
             });
 
