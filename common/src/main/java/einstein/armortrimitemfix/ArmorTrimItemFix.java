@@ -1,11 +1,9 @@
 package einstein.armortrimitemfix;
 
+import com.google.common.base.Suppliers;
 import com.mojang.brigadier.CommandDispatcher;
-import einstein.armortrimitemfix.data.EquipmentType;
 import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
-import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.minecraft.client.color.item.ItemTintSource;
+import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -17,29 +15,20 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.FileToIdConverter;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.trim.ArmorTrim;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimPattern;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
-import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Comparator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.function.Supplier;
 
 public class ArmorTrimItemFix {
 
@@ -49,6 +38,9 @@ public class ArmorTrimItemFix {
     public static final String PALETTES_DIRECTORY = "trims/color_palettes/";
     public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
     public static final ResourceLocation BLOCKS_ATLAS = ResourceLocation.withDefaultNamespace("blocks");
+    public static final Supplier<ResourceLocation> MATS_PACK_LOCATION = Suppliers.memoize(() -> loc("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));
+    public static final Component MATS_PACK_NAME = Component.translatable("resourcePack.armortrimitemfix.more_armor_trims_support.name");
+    public static final String MORE_ARMOR_TRIMS_MOD_ID = "more_armor_trims";
 
     public static void init() {
     }
