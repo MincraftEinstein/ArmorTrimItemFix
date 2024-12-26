@@ -1,7 +1,7 @@
 package einstein.armortrimitemfix.mixin;
 
 import einstein.armortrimitemfix.ArmorTrimItemFix;
-import einstein.armortrimitemfix.ArmorTrimProperty;
+import einstein.armortrimitemfix.data.ArmorTrimProperty;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperties;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty;
 import net.minecraft.resources.ResourceLocation;

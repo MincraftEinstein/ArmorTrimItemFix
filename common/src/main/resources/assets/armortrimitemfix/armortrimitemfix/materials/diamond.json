@@ -1,0 +1,6 @@
+{
+  "material": "minecraft:diamond",
+  "overrides": {
+    "minecraft:diamond": "diamond_darker"
+  }
+}

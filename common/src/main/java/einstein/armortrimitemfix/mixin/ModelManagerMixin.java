@@ -4,8 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
-import einstein.armortrimitemfix.ArmorTrimProperty;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import einstein.armortrimitemfix.data.*;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.TextureSlots;
 import net.minecraft.client.renderer.item.BlockModelWrapper;
@@ -28,33 +27,35 @@ public class ModelManagerMixin {
     @WrapOperation(method = "discoverModelDependencies", at = @At(value = "NEW", target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"))
     private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> inputModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
         Map<ResourceLocation, UnbakedModel> map = new HashMap<>(inputModels);
-        ArmorTrimItemFix.TRIMMABLES.forEach((item, trimmableData) -> {
-            ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+        TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
+            ResourceLocation id = BuiltInRegistries.ITEM.getKey(itemData.item());
             Map<ResourceLocation, ClientItem> contents = clientInfos.contents();
             ItemModel.Unbaked fallbackModel = contents.remove(id).model();
-            Int2ObjectMap<ResourceLocation> layersTextures = trimmableData.layersTextures();
-
+            List<TrimmableItemData.TextureLayer> layersTextures = itemData.layers();
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
-            ArmorTrimItemFix.TRIM_PATTERNS.forEach(patternKey -> {
-                ArmorTrimItemFix.TRIM_MATERIALS.forEach(materialData -> {
-                    String materialName = materialData.getName(trimmableData.equipmentAsset());
-                    ResourceLocation modelId = ArmorTrimItemFix.loc("item/" + id.getPath() + "_" + patternKey.location().getPath() + "_" + materialName + "_trim");
+
+            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
+                ResourceLocation patternId = patternData.pattern();
+                TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
+                    String materialName = materialData.getName(itemData.material());
+                    ResourceLocation modelId = ArmorTrimItemFix.loc("item/" + id.getPath() + "_" + patternId.getPath() + "_" + materialName + "_trim");
                     TextureSlots.Data.Builder builder = new TextureSlots.Data.Builder();
 
                     final int[] i = {0};
-                    if (!layersTextures.containsKey(0)) {
+                    if (layersTextures.stream().noneMatch(layer -> layer.index() == 0)) {
                         builder.addTexture("layer0", new Material(TextureAtlas.LOCATION_BLOCKS, id.withPrefix("item/")));
                     }
 
-                    layersTextures.forEach((index, texture) -> {
-                        builder.addTexture("layer" + index, new Material(TextureAtlas.LOCATION_BLOCKS, texture));
+                    layersTextures.forEach(layer -> {
+                        int index = layer.index();
+                        builder.addTexture("layer" + index, new Material(TextureAtlas.LOCATION_BLOCKS, layer.texture()));
                         i[0] = index;
                     });
 
                     i[0]++;
-                    builder.addTexture("layer" + i[0], new Material(TextureAtlas.LOCATION_BLOCKS, ArmorTrimItemFix.layerLoc(trimmableData.type(), patternKey.location().getPath(), materialName)));
+                    builder.addTexture("layer" + i[0], new Material(TextureAtlas.LOCATION_BLOCKS, ArmorTrimItemFix.layerLoc(itemData.type(), patternId.getPath(), materialName)));
                     map.put(modelId, new BlockModel(ResourceLocation.withDefaultNamespace("item/generated"), List.of(), builder.build(), null, null, null));
-                    cases.add(new SelectItemModel.SwitchCase<>(List.of(new ArmorTrimProperty.Data(patternKey, materialData.key())), new BlockModelWrapper.Unbaked(modelId, trimmableData.tintSources())));
+                    cases.add(new SelectItemModel.SwitchCase<>(List.of(new ArmorTrimProperty.Data(patternId, materialData.materialId())), new BlockModelWrapper.Unbaked(modelId, itemData.tintSources())));
                 });
             });
 

@@ -1,0 +1,5 @@
+{
+  "item": "minecraft:diamond_chestplate",
+  "type": "chestplate",
+  "override_material": "minecraft:diamond"
+}

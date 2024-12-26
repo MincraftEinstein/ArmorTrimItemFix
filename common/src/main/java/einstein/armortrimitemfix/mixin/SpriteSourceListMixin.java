@@ -4,6 +4,9 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
+import einstein.armortrimitemfix.data.EquipmentType;
+import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
+import einstein.armortrimitemfix.data.TrimPatternReloadListener;
 import net.minecraft.client.renderer.texture.atlas.SpriteSource;
 import net.minecraft.client.renderer.texture.atlas.SpriteSourceList;
 import net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations;
@@ -25,24 +28,25 @@ public class SpriteSourceListMixin {
             Map<String, ResourceLocation> permutations = new HashMap<>();
             List<ResourceLocation> textures = new ArrayList<>();
 
-            ArmorTrimItemFix.TRIM_MATERIALS.forEach(materialData -> {
-                ResourceLocation materialId = materialData.key().location();
+            TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
+                ResourceLocation materialId = materialData.materialId();
                 permutations.put(materialId.getPath(), materialId.withPrefix("trims/color_palettes/"));
                 materialData.overrides().forEach((equipmentAsset, overrideName) -> {
                     permutations.put(overrideName, ResourceLocation.fromNamespaceAndPath(materialId.getNamespace(), "trims/color_palettes/" + overrideName));
                 });
             });
 
-            ArmorTrimItemFix.TRIM_PATTERNS.forEach(patternKey -> {
-                ArmorTrimItemFix.ARMOR_TYPES.forEach(type -> {
-                    ResourceLocation patternId = patternKey.location();
+            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
+                for (int i = 0; i < EquipmentType.values().length; i++) {
+                    EquipmentType type = EquipmentType.values()[i];
+                    ResourceLocation patternId = patternData.pattern();
                     String namespace = patternId.getNamespace();
-                    String typeName = type.getName();
+                    String typeName = type.getSerializedName();
                     textures.add(ResourceLocation.fromNamespaceAndPath(
                             namespace.equals(ResourceLocation.DEFAULT_NAMESPACE) ? ArmorTrimItemFix.MOD_ID : namespace,
                             "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim")
                     );
-                });
+                }
             });
 
             sources.add(new PalettedPermutations(textures, ArmorTrimItemFix.PALETTE_KEY, permutations));
