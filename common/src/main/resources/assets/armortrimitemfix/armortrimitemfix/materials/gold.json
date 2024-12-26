@@ -1,0 +1,6 @@
+{
+  "material": "minecraft:gold",
+  "overrides": {
+    "minecraft:gold": "gold_darker"
+  }
+}

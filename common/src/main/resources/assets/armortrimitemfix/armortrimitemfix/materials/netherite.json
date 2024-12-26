@@ -1,0 +1,6 @@
+{
+  "material": "minecraft:netherite",
+  "overrides": {
+    "minecraft:netherite": "netherite_darker"
+  }
+}

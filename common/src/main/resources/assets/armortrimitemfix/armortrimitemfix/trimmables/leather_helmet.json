@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:leather_helmet",
+  "type": "helmet",
+  "layers": [
+    {
+      "index": 1,
+      "texture": "minecraft:item/leather_helmet_overlay"
+    }
+  ],
+  "tints": [
+    {
+      "type": "minecraft:dye",
+      "default": -6265536
+    }
+  ]
+}

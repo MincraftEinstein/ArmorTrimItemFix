@@ -1,0 +1,16 @@
+{
+  "item": "minecraft:leather_boots",
+  "type": "boots",
+  "layers": [
+    {
+      "index": 1,
+      "texture": "minecraft:item/leather_boots_overlay"
+    }
+  ],
+  "tints": [
+    {
+      "type": "minecraft:dye",
+      "default": -6265536
+    }
+  ]
+}

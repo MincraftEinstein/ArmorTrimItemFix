@@ -1,0 +1,5 @@
+{
+  "item": "minecraft:netherite_helmet",
+  "type": "helmet",
+  "override_material": "minecraft:netherite"
+}

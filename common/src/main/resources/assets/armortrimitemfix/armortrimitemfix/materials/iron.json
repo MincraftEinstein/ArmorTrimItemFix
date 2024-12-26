@@ -1,0 +1,6 @@
+{
+  "material": "minecraft:iron",
+  "overrides": {
+    "minecraft:iron": "iron_darker"
+  }
+}
