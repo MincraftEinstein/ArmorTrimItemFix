@@ -1,12 +1,9 @@
 {
   "item": "minecraft:leather_chestplate",
   "type": "chestplate",
-  "layers": [
-    {
-      "index": 1,
-      "texture": "minecraft:item/leather_chestplate_overlay"
-    }
-  ],
+  "textures": {
+    "layer1": "minecraft:item/leather_chestplate_overlay",
+  },
   "tints": [
     {
       "type": "minecraft:dye",

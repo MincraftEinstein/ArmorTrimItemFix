@@ -4,6 +4,9 @@ import com.google.common.base.Suppliers;
 import com.mojang.brigadier.CommandDispatcher;
 import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
 import einstein.armortrimitemfix.platform.Services;
+import net.minecraft.client.renderer.block.model.TextureSlots;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -92,5 +95,10 @@ public class ArmorTrimItemFix {
 
     public static FileToIdConverter createLister(String directory) {
         return FileToIdConverter.json(MOD_ID + "/" + directory);
+    }
+
+    @SuppressWarnings("deprecation")
+    public static void addTexture(TextureSlots.Data.Builder builder, int index, ResourceLocation textureLayers) {
+        builder.addTexture("layer" + index, new Material(TextureAtlas.LOCATION_BLOCKS, textureLayers));
     }
 }
