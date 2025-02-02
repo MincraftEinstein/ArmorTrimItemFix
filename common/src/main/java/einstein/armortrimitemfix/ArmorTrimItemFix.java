@@ -2,6 +2,7 @@ package einstein.armortrimitemfix;
 
 import com.google.common.base.Suppliers;
 import com.mojang.brigadier.CommandDispatcher;
+import einstein.armortrimitemfix.data.EquipmentType;
 import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
 import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.client.renderer.block.model.TextureSlots;
@@ -31,6 +32,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class ArmorTrimItemFix {
@@ -41,6 +43,7 @@ public class ArmorTrimItemFix {
     public static final String PALETTES_DIRECTORY = "trims/color_palettes/";
     public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
     public static final ResourceLocation BLOCKS_ATLAS = ResourceLocation.withDefaultNamespace("blocks");
+    public static final ResourceLocation GENERATED_MODEL = ResourceLocation.withDefaultNamespace("item/generated");
     public static final Supplier<ResourceLocation> MATS_PACK_LOCATION = Suppliers.memoize(() -> loc("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));
     public static final Component MATS_PACK_NAME = Component.translatable("resourcePack.armortrimitemfix.more_armor_trims_support.name");
     public static final String MORE_ARMOR_TRIMS_MOD_ID = "more_armor_trims";
@@ -93,6 +96,10 @@ public class ArmorTrimItemFix {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 
+    public static ResourceLocation redirectedLoc(String namespace, String path) {
+        return ResourceLocation.fromNamespaceAndPath(namespace.equals(ResourceLocation.DEFAULT_NAMESPACE) ? MOD_ID : namespace, path);
+    }
+
     public static FileToIdConverter createLister(String directory) {
         return FileToIdConverter.json(MOD_ID + "/" + directory);
     }
@@ -100,5 +107,14 @@ public class ArmorTrimItemFix {
     @SuppressWarnings("deprecation")
     public static void addTexture(TextureSlots.Data.Builder builder, int index, ResourceLocation textureLayers) {
         builder.addTexture("layer" + index, new Material(TextureAtlas.LOCATION_BLOCKS, textureLayers));
+    }
+
+    public static ResourceLocation getTextureLocation(EquipmentType type, ResourceLocation patternId) {
+        String typeName = type.getSerializedName();
+        return redirectedLoc(patternId.getNamespace(), "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim");
+    }
+
+    public static void addColorPalette(Map<String, ResourceLocation> permutations, ResourceLocation materialId) {
+        permutations.put(materialId.toDebugFileName(), materialId.withPrefix(PALETTES_DIRECTORY));
     }
 }

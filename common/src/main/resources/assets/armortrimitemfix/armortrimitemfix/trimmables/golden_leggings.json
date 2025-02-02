@@ -1,5 +1,5 @@
 {
   "item": "minecraft:golden_leggings",
   "type": "leggings",
-  "override_material": "minecraft:golden"
+  "override_id": "minecraft:golden"
 }

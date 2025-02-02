@@ -4,10 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
-import einstein.armortrimitemfix.data.ArmorTrimProperty;
-import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
-import einstein.armortrimitemfix.data.TrimPatternReloadListener;
-import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
+import einstein.armortrimitemfix.data.*;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
 import net.minecraft.client.renderer.block.model.TextureSlots;
@@ -32,26 +29,28 @@ import static einstein.armortrimitemfix.ArmorTrimItemFix.addTexture;
 public class ModelManagerMixin {
 
     @WrapOperation(method = "discoverModelDependencies", at = @At(value = "NEW", target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"))
-    private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> inputModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
-        Map<ResourceLocation, UnbakedModel> map = new HashMap<>(inputModels);
+    private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> originalModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
+        Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
         TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
-            ResourceLocation id = BuiltInRegistries.ITEM.getKey(itemData.item());
+            ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
             Map<ResourceLocation, ClientItem> contents = clientInfos.contents();
-            ItemModel.Unbaked fallbackModel = contents.remove(id).model();
+            ItemModel.Unbaked fallbackModel = contents.remove(itemId).model();
             Map<String, ResourceLocation> textureLayers = itemData.layers();
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
-            String equipmentName = itemData.type().getSerializedName();
+            EquipmentType type = itemData.type();
 
             TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
                 ResourceLocation patternId = patternData.pattern();
-                String patternName = patternId.getPath();
+                String patternFileName = patternId.toDebugFileName();
+
                 TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
-                    String materialName = materialData.getName(itemData.overrideMaterial().orElse(null));
-                    ResourceLocation modelId = ArmorTrimItemFix.loc("item/" + id.getPath() + "_" + patternName + "_" + materialName + "_trim");
+                    String materialFileName = materialData.getFileName(itemData.overrideId().orElse(null));
+                    ResourceLocation modelId = ArmorTrimItemFix.redirectedLoc(itemId.getNamespace(),
+                            "item/" + itemId.getPath() + "-" + patternFileName + "-" + materialFileName + "-trim");
                     TextureSlots.Data.Builder builder = new TextureSlots.Data.Builder();
 
                     if (!textureLayers.containsKey("layer0")) {
-                        addTexture(builder, 0, id.withPrefix("item/"));
+                        addTexture(builder, 0, itemId.withPrefix("item/"));
                     }
 
                     int lastIndex = 0;
@@ -61,17 +60,23 @@ public class ModelManagerMixin {
                         lastIndex = index;
                     }
 
-                    addTexture(builder, ++lastIndex, ArmorTrimItemFix.loc("trims/items/" + equipmentName + "/" + equipmentName + "_" + patternName + "_trim_" + materialName));
-                    map.put(modelId, new BlockModel(ResourceLocation.withDefaultNamespace("item/generated"), List.of(), builder.build(), null, null, null));
-                    cases.add(new SelectItemModel.SwitchCase<>(List.of(new ArmorTrimProperty.Data(patternId, materialData.materialId())), new BlockModelWrapper.Unbaked(modelId, itemData.tintSources())));
+                    addTexture(builder, ++lastIndex, ArmorTrimItemFix.getTextureLocation(type, patternId).withSuffix("_" + materialFileName));
+                    if (models.put(modelId, new BlockModel(ArmorTrimItemFix.GENERATED_MODEL, List.of(), builder.build(), null, null, null)) != null) {
+                        ArmorTrimItemFix.LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
+                    }
+
+                    cases.add(new SelectItemModel.SwitchCase<>(
+                            List.of(new ArmorTrimProperty.Data(patternId, materialData.materialId())),
+                            new BlockModelWrapper.Unbaked(modelId, itemData.tintSources())
+                    ));
                 });
             });
 
-            contents.put(id, new ClientItem(new SelectItemModel.Unbaked(
+            contents.put(itemId, new ClientItem(new SelectItemModel.Unbaked(
                     new SelectItemModel.UnbakedSwitch<>(new ArmorTrimProperty(), cases),
                     Optional.of(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
         });
-        return original.call(map, missingModel);
+        return original.call(models, missingModel);
     }
 }

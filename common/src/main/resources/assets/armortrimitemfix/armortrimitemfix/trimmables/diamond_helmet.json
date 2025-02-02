@@ -1,5 +1,5 @@
 {
   "item": "minecraft:diamond_helmet",
   "type": "helmet",
-  "override_material": "minecraft:diamond"
+  "override_id": "minecraft:diamond"
 }

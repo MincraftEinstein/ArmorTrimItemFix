@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static einstein.armortrimitemfix.ArmorTrimItemFix.addColorPalette;
+
 @Mixin(SpriteSourceList.class)
 public class SpriteSourceListMixin {
 
@@ -29,23 +31,15 @@ public class SpriteSourceListMixin {
             List<ResourceLocation> textures = new ArrayList<>();
 
             TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
-                ResourceLocation materialId = materialData.materialId();
-                permutations.put(materialId.getPath(), materialId.withPrefix(ArmorTrimItemFix.PALETTES_DIRECTORY));
-                materialData.overrides().forEach((equipmentAsset, overrideName) -> {
-                    permutations.put(overrideName, ResourceLocation.fromNamespaceAndPath(materialId.getNamespace(), ArmorTrimItemFix.PALETTES_DIRECTORY + overrideName));
-                });
+                addColorPalette(permutations, materialData.materialId());
+                materialData.overrides().forEach((overrideId, overrideMaterial) ->
+                        addColorPalette(permutations, overrideMaterial));
             });
 
             TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
-                for (int i = 0; i < EquipmentType.values().length; i++) {
-                    EquipmentType type = EquipmentType.values()[i];
+                for (EquipmentType type : EquipmentType.values()) {
                     ResourceLocation patternId = patternData.pattern();
-                    String namespace = patternId.getNamespace();
-                    String typeName = type.getSerializedName();
-                    textures.add(ResourceLocation.fromNamespaceAndPath(
-                            namespace.equals(ResourceLocation.DEFAULT_NAMESPACE) ? ArmorTrimItemFix.MOD_ID : namespace,
-                            "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim")
-                    );
+                    textures.add(ArmorTrimItemFix.getTextureLocation(type, patternId));
                 }
             });
 

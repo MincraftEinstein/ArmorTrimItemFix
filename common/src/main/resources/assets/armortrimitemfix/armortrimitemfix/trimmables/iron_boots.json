@@ -1,5 +1,5 @@
 {
   "item": "minecraft:iron_boots",
   "type": "boots",
-  "override_material": "minecraft:iron"
+  "override_id": "minecraft:iron"
 }

@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public record TrimmableItemData(Item item, EquipmentType type, Optional<ResourceLocation> overrideMaterial,
+public record TrimmableItemData(Item item, EquipmentType type, Optional<ResourceLocation> overrideId,
                                 Map<String, ResourceLocation> layers, List<ItemTintSource> tintSources) {
 
     private static final List<String> VALID_LAYERS = List.of("layer0", "layer1", "layer2", "layer3");
@@ -25,7 +25,7 @@ public record TrimmableItemData(Item item, EquipmentType type, Optional<Resource
     public static final Codec<TrimmableItemData> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(TrimmableItemData::item),
             EquipmentType.CODEC.fieldOf("type").forGetter(TrimmableItemData::type),
-            ResourceLocation.CODEC.optionalFieldOf("override_material").forGetter(TrimmableItemData::overrideMaterial),
+            ResourceLocation.CODEC.optionalFieldOf("override_id").forGetter(TrimmableItemData::overrideId),
             LAYER_CODEC.optionalFieldOf("textures", Map.of()).forGetter(TrimmableItemData::layers),
             Codec.list(ItemTintSources.CODEC).optionalFieldOf("tints", List.of()).forGetter(TrimmableItemData::tintSources)
     ).apply(instance, TrimmableItemData::new));

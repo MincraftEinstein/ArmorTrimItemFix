@@ -1,5 +1,5 @@
 {
   "item": "minecraft:iron_chestplate",
   "type": "chestplate",
-  "override_material": "minecraft:iron"
+  "override_id": "minecraft:iron"
 }
