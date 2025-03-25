@@ -31,10 +31,12 @@ public class ModelManagerMixin {
     @WrapOperation(method = "discoverModelDependencies", at = @At(value = "NEW", target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"))
     private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> originalModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
         Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
+        Map<ResourceLocation, ClientItem> contents = new HashMap<>(clientInfos.contents());
+
         TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
             ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
-            Map<ResourceLocation, ClientItem> contents = clientInfos.contents();
-            ItemModel.Unbaked fallbackModel = contents.remove(itemId).model();
+            ClientItem fallbackClientItem = contents.remove(itemId);
+            ItemModel.Unbaked fallbackModel = fallbackClientItem != null ? fallbackClientItem.model() : null;
             Map<String, ResourceLocation> textureLayers = itemData.layers();
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
             EquipmentType type = itemData.type();
@@ -74,9 +76,11 @@ public class ModelManagerMixin {
 
             contents.put(itemId, new ClientItem(new SelectItemModel.Unbaked(
                     new SelectItemModel.UnbakedSwitch<>(new ArmorTrimProperty(), cases),
-                    Optional.of(fallbackModel)
+                    Optional.ofNullable(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
         });
+
+        ((LoadedClientInfosAccessor) (Object) clientInfos).setContents(contents);
         return original.call(models, missingModel);
     }
 }
