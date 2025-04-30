@@ -3,7 +3,6 @@ package einstein.armortrimitemfix.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import einstein.armortrimitemfix.ArmorTrimItemFix;
 import einstein.armortrimitemfix.data.*;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
@@ -23,7 +22,7 @@ import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.*;
 
-import static einstein.armortrimitemfix.ArmorTrimItemFix.addTexture;
+import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 
 @Mixin(ModelManager.class)
 public class ModelManagerMixin {
@@ -47,7 +46,7 @@ public class ModelManagerMixin {
 
                 TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
                     String materialFileName = materialData.getFileName(itemData.overrideId().orElse(null));
-                    ResourceLocation modelId = ArmorTrimItemFix.redirectedLoc(itemId.getNamespace(),
+                    ResourceLocation modelId = redirectedLoc(itemId.getNamespace(),
                             "item/" + itemId.getPath() + "-" + patternFileName + "-" + materialFileName + "-trim");
                     TextureSlots.Data.Builder builder = new TextureSlots.Data.Builder();
 
@@ -62,9 +61,9 @@ public class ModelManagerMixin {
                         lastIndex = index;
                     }
 
-                    addTexture(builder, ++lastIndex, ArmorTrimItemFix.getTextureLocation(type, patternId).withSuffix("_" + materialFileName));
-                    if (models.put(modelId, new BlockModel(ArmorTrimItemFix.GENERATED_MODEL, List.of(), builder.build(), null, null, null)) != null) {
-                        ArmorTrimItemFix.LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
+                    addTexture(builder, ++lastIndex, getTextureLocation(type, patternId).withSuffix("_" + materialFileName));
+                    if (models.put(modelId, new BlockModel(GENERATED_MODEL, List.of(), builder.build(), null, null, null)) != null) {
+                        LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
                     }
 
                     cases.add(new SelectItemModel.SwitchCase<>(

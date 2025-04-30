@@ -3,7 +3,6 @@ package einstein.armortrimitemfix.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import einstein.armortrimitemfix.ArmorTrimItemFix;
 import einstein.armortrimitemfix.data.EquipmentType;
 import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
 import einstein.armortrimitemfix.data.TrimPatternReloadListener;
@@ -19,14 +18,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static einstein.armortrimitemfix.ArmorTrimItemFix.addColorPalette;
+import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 
 @Mixin(SpriteSourceList.class)
 public class SpriteSourceListMixin {
 
     @WrapOperation(method = "load", at = @At(value = "NEW", target = "(Ljava/util/List;)Lnet/minecraft/client/renderer/texture/atlas/SpriteSourceList;"))
     private static SpriteSourceList add(List<SpriteSource> sources, Operation<SpriteSourceList> original, @Local(argsOnly = true) ResourceLocation atlasSprite) {
-        if (atlasSprite.equals(ArmorTrimItemFix.BLOCKS_ATLAS)) {
+        if (atlasSprite.equals(BLOCKS_ATLAS)) {
             Map<String, ResourceLocation> permutations = new HashMap<>();
             List<ResourceLocation> textures = new ArrayList<>();
 
@@ -39,11 +38,11 @@ public class SpriteSourceListMixin {
             TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
                 for (EquipmentType type : EquipmentType.values()) {
                     ResourceLocation patternId = patternData.pattern();
-                    textures.add(ArmorTrimItemFix.getTextureLocation(type, patternId));
+                    textures.add(getTextureLocation(type, patternId));
                 }
             });
 
-            sources.add(new PalettedPermutations(textures, ArmorTrimItemFix.PALETTE_KEY, permutations));
+            sources.add(new PalettedPermutations(textures, PALETTE_KEY, permutations));
         }
         return original.call(sources);
     }
