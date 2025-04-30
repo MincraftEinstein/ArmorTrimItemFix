@@ -40,8 +40,7 @@ public class ModelManagerMixin {
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
             EquipmentType type = itemData.type();
 
-            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
-                ResourceLocation patternId = patternData.pattern();
+            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternId -> {
                 String patternFileName = patternId.toDebugFileName();
 
                 TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {

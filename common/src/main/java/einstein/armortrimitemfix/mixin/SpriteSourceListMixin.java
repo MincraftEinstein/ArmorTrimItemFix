@@ -35,9 +35,8 @@ public class SpriteSourceListMixin {
                         addColorPalette(permutations, overrideMaterial));
             });
 
-            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternData -> {
+            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternId -> {
                 for (EquipmentType type : EquipmentType.values()) {
-                    ResourceLocation patternId = patternData.pattern();
                     textures.add(getTextureLocation(type, patternId));
                 }
             });
