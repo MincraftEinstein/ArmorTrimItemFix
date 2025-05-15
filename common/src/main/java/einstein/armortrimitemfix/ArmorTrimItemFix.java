@@ -30,6 +30,7 @@ import net.minecraft.world.item.equipment.trim.TrimPattern;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import org.joml.Vector3f;
+import org.joml.Vector3fc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -123,7 +124,7 @@ public class ArmorTrimItemFix {
         permutations.put(materialId.toDebugFileName(), materialId.withPrefix(PALETTES_DIRECTORY));
     }
 
-    public static Vector3f expand(Vector3f vertex, int layerIndex, boolean invert) {
+    public static Vector3fc expand(Vector3fc vertex, int layerIndex, boolean invert) {
         float amount = layerIndex * EXPAND_AMOUNT;
         if (amount > 0) {
             return new Vector3f(
