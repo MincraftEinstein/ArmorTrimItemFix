@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class TrimMaterialReloadListener extends EarlyResourceReloadListener<TrimMaterialData> {
 
+    public static final ResourceLocation ID = ArmorTrimItemFix.loc("trim_materials");
     private static final FileToIdConverter LISTER = ArmorTrimItemFix.createLister("materials");
     public static final List<TrimMaterialData> TRIM_MATERIALS = new ArrayList<>();
 

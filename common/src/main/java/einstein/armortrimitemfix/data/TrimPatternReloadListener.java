@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.mojang.serialization.Dynamic;
 import com.mojang.serialization.JsonOps;
+import einstein.armortrimitemfix.ArmorTrimItemFix;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -18,6 +19,7 @@ import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 
 public class TrimPatternReloadListener extends SimplePreparableReloadListener<Void> {
 
+    public static final ResourceLocation ID = ArmorTrimItemFix.loc("trim_patterns");
     public static final List<ResourceLocation> TRIM_PATTERNS = new ArrayList<>();
 
     @Override

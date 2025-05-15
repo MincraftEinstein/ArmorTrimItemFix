@@ -1,5 +1,8 @@
 package einstein.armortrimitemfix;
 
+import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
+import einstein.armortrimitemfix.data.TrimPatternReloadListener;
+import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
 import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.packs.PackType;
@@ -7,7 +10,9 @@ import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.AddClientReloadListenersEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.resources.VanillaClientListeners;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
@@ -22,6 +27,16 @@ public class ArmorTrimItemFixNeoForge {
                     ModernFixWarningManager.clientTick(Minecraft.getInstance())
             );
         }
+
+        modEventBus.addListener((AddClientReloadListenersEvent event) -> {
+            event.addListener(TrimmableItemReloadListener.ID, new TrimmableItemReloadListener());
+            event.addListener(TrimMaterialReloadListener.ID, new TrimMaterialReloadListener());
+            event.addListener(TrimPatternReloadListener.ID, new TrimPatternReloadListener());
+
+            event.addDependency(TrimmableItemReloadListener.ID, VanillaClientListeners.LANGUAGE);
+            event.addDependency(TrimMaterialReloadListener.ID, VanillaClientListeners.LANGUAGE);
+            event.addDependency(TrimPatternReloadListener.ID, VanillaClientListeners.LANGUAGE);
+        });
 
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
             modEventBus.addListener((AddPackFindersEvent event) ->

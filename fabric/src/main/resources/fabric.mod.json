@@ -22,7 +22,8 @@
   },
   "accessWidener": "armortrimitemfix.accesswidener",
   "mixins": [
-    "armortrimitemfix.mixins.json"
+    "armortrimitemfix.mixins.json",
+    "armortrimitemfix.fabric.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_version}",

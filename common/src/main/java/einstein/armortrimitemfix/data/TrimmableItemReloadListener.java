@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class TrimmableItemReloadListener extends EarlyResourceReloadListener<TrimmableItemData> {
 
+    public static final ResourceLocation ID = ArmorTrimItemFix.loc("trimmable_items");
     private static final FileToIdConverter LISTER = ArmorTrimItemFix.createLister("trimmables");
     public static final List<TrimmableItemData> TRIMMABLE_ITEMS = new ArrayList<>();
 
