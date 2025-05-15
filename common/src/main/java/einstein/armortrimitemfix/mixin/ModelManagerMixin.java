@@ -61,7 +61,7 @@ public class ModelManagerMixin {
                     }
 
                     addTexture(builder, ++lastIndex, getTextureLocation(type, patternId).withSuffix("_" + materialFileName));
-                    if (models.put(modelId, new BlockModel(GENERATED_MODEL, List.of(), builder.build(), null, null, null)) != null) {
+                    if (models.put(modelId, new BlockModel(null, null, null, null, builder.build(), GENERATED_MODEL)) != null) {
                         LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
                     }
 

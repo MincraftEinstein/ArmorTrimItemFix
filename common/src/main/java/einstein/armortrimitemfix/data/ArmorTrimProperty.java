@@ -31,6 +31,11 @@ public class ArmorTrimProperty implements SelectItemModelProperty<ArmorTrimPrope
         return new Data(unwrapId(trim.pattern()), unwrapId(trim.material()));
     }
 
+    @Override
+    public Codec<Data> valueCodec() {
+        return Data.CODEC;
+    }
+
     private static @Nullable ResourceLocation unwrapId(Holder<?> holder) {
         ResourceKey<?> key = holder.unwrapKey().orElse(null);
         if (key != null) {
