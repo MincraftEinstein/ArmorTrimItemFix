@@ -1,11 +1,13 @@
 package einstein.armortrimitemfix;
 
 import einstein.armortrimitemfix.platform.Services;
+import net.minecraft.client.Minecraft;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
@@ -15,6 +17,12 @@ public class ArmorTrimItemFixNeoForge {
 
     public ArmorTrimItemFixNeoForge(IEventBus modEventBus) {
         ArmorTrimItemFix.init();
+        if (ModernFixWarningManager.IS_MODERNFIX_LOADED.get()) {
+            NeoForge.EVENT_BUS.addListener((ClientTickEvent.Post event) ->
+                    ModernFixWarningManager.clientTick(Minecraft.getInstance())
+            );
+        }
+
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
             modEventBus.addListener((AddPackFindersEvent event) ->
                     event.addPackFinders(ArmorTrimItemFix.MATS_PACK_LOCATION.get(), PackType.CLIENT_RESOURCES,

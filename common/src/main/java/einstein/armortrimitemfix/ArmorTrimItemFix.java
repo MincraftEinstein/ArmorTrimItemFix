@@ -29,6 +29,7 @@ import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimPattern;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
+import org.joml.Vector3f;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,8 +48,12 @@ public class ArmorTrimItemFix {
     public static final Supplier<ResourceLocation> MATS_PACK_LOCATION = Suppliers.memoize(() -> loc("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));
     public static final Component MATS_PACK_NAME = Component.translatable("resourcePack.armortrimitemfix.more_armor_trims_support.name");
     public static final String MORE_ARMOR_TRIMS_MOD_ID = "more_armor_trims";
+    private static final float EXPAND_AMOUNT = 0.001F;
 
     public static void init() {
+        if (ModernFixWarningManager.IS_MODERNFIX_LOADED.get()) {
+            ModernFixWarningManager.load();
+        }
     }
 
     public static void registerDevCommand(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext buildContext, Commands.CommandSelection selection) {
@@ -116,5 +121,24 @@ public class ArmorTrimItemFix {
 
     public static void addColorPalette(Map<String, ResourceLocation> permutations, ResourceLocation materialId) {
         permutations.put(materialId.toDebugFileName(), materialId.withPrefix(PALETTES_DIRECTORY));
+    }
+
+    public static Vector3f expand(Vector3f vertex, int layerIndex, boolean invert) {
+        float amount = layerIndex * EXPAND_AMOUNT;
+        if (amount > 0) {
+            return new Vector3f(
+                    add(vertex.x(), amount, invert),
+                    add(vertex.y(), amount, invert),
+                    add(vertex.z(), amount, invert)
+            );
+        }
+        return vertex;
+    }
+
+    private static float add(float value, float amount, boolean invert) {
+        if (invert) {
+            return value - amount;
+        }
+        return value + amount;
     }
 }
