@@ -117,7 +117,7 @@ public class ArmorTrimItemFix {
 
     public static ResourceLocation getTextureLocation(EquipmentType type, ResourceLocation patternId) {
         String typeName = type.getSerializedName();
-        return redirectedLoc(patternId.getNamespace(), "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim");
+        return redirectedLoc(patternId.getNamespace(), "item/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim");
     }
 
     public static void addColorPalette(Map<String, ResourceLocation> permutations, ResourceLocation materialId) {

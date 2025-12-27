@@ -27,12 +27,17 @@ import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 @Mixin(ModelManager.class)
 public class ModelManagerMixin {
 
-    @WrapOperation(method = "discoverModelDependencies*", at = @At(value = "NEW", target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"))
+    @WrapOperation(
+            method = "discoverModelDependencies*",
+            at = @At(
+                    value = "NEW",
+                    target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"
+            )
+    )
     private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> originalModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
         Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
         Map<ResourceLocation, ClientItem> contents = new HashMap<>(clientInfos.contents());
 
-/*
         TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
             ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
             ClientItem fallbackClientItem = contents.remove(itemId);
@@ -78,7 +83,6 @@ public class ModelManagerMixin {
                     Optional.ofNullable(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
         });
-*/
 
         ((LoadedClientInfosAccessor) (Object) clientInfos).setContents(contents);
         return original.call(models, missingModel);
