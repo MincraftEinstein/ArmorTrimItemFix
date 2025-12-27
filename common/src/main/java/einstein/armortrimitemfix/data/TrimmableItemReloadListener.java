@@ -4,6 +4,8 @@ import einstein.armortrimitemfix.ArmorTrimItemFix;
 import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
+import net.minecraft.util.profiling.ProfilerFiller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,5 +25,6 @@ public class TrimmableItemReloadListener extends EarlyResourceReloadListener<Tri
     protected void earlyApply(Map<ResourceLocation, TrimmableItemData> map, ResourceManager manager) {
         TRIMMABLE_ITEMS.clear();
         TRIMMABLE_ITEMS.addAll(map.values());
+        ArmorTrimItemFix.LOGGER.info("Trimmable items loader: {}", TRIMMABLE_ITEMS);
     }
 }

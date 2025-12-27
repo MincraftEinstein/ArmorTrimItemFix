@@ -1,12 +1,18 @@
 package einstein.armortrimitemfix;
 
+import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
+import einstein.armortrimitemfix.data.TrimPatternReloadListener;
+import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
 import einstein.armortrimitemfix.platform.Services;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
+import net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.server.packs.PackType;
 
 public class ArmorTrimItemFixFabric implements ModInitializer {
 
@@ -16,6 +22,15 @@ public class ArmorTrimItemFixFabric implements ModInitializer {
         if (ModernFixWarningManager.IS_MODERNFIX_LOADED.get()) {
             ClientTickEvents.END_CLIENT_TICK.register(ModernFixWarningManager::clientTick);
         }
+
+        ResourceLoader loader = ResourceLoader.get(PackType.CLIENT_RESOURCES);
+        loader.registerReloader(TrimmableItemReloadListener.ID, new TrimmableItemReloadListener());
+        loader.registerReloader(TrimMaterialReloadListener.ID, new TrimMaterialReloadListener());
+        loader.registerReloader(TrimPatternReloadListener.ID, new TrimPatternReloadListener());
+
+        loader.addReloaderOrdering(TrimmableItemReloadListener.ID, TrimPatternReloadListener.ID);
+        loader.addReloaderOrdering(TrimMaterialReloadListener.ID, TrimPatternReloadListener.ID);
+        loader.addReloaderOrdering(TrimPatternReloadListener.ID, ResourceReloaderKeys.BEFORE_VANILLA);
 
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
             ResourceManagerHelper.registerBuiltinResourcePack(ArmorTrimItemFix.MATS_PACK_LOCATION.get(),

@@ -49,6 +49,7 @@ public class TrimPatternReloadListener extends SimplePreparableReloadListener<Vo
 
         TRIM_PATTERNS.clear();
         TRIM_PATTERNS.addAll(patterns);
+        LOGGER.info("Patterns loader: {}", TRIM_PATTERNS);
         return null;
     }
 

@@ -32,6 +32,7 @@ public class ModelManagerMixin {
         Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
         Map<ResourceLocation, ClientItem> contents = new HashMap<>(clientInfos.contents());
 
+/*
         TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
             ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
             ClientItem fallbackClientItem = contents.remove(itemId);
@@ -77,6 +78,7 @@ public class ModelManagerMixin {
                     Optional.ofNullable(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
         });
+*/
 
         ((LoadedClientInfosAccessor) (Object) clientInfos).setContents(contents);
         return original.call(models, missingModel);

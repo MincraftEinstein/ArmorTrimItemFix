@@ -23,5 +23,6 @@ public class TrimMaterialReloadListener extends EarlyResourceReloadListener<Trim
     protected void earlyApply(Map<ResourceLocation, TrimMaterialData> map, ResourceManager manager) {
         TRIM_MATERIALS.clear();
         TRIM_MATERIALS.addAll(map.values());
+        ArmorTrimItemFix.LOGGER.info("Materials loader: {}", TRIM_MATERIALS);
     }
 }
