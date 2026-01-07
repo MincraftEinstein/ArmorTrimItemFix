@@ -3,11 +3,8 @@ package einstein.armortrimitemfix.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import einstein.armortrimitemfix.ArmorTrimItemFix;
 import einstein.armortrimitemfix.data.EquipmentType;
-import einstein.armortrimitemfix.data.TrimMaterialReloadListener;
-import einstein.armortrimitemfix.data.TrimPatternReloadListener;
-import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
+import einstein.armortrimitemfix.data.TrimDataReloadManager;
 import net.minecraft.client.renderer.texture.atlas.SpriteSource;
 import net.minecraft.client.renderer.texture.atlas.SpriteSourceList;
 import net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations;
@@ -31,23 +28,18 @@ public class SpriteSourceListMixin {
             Map<String, ResourceLocation> permutations = new HashMap<>();
             List<ResourceLocation> textures = new ArrayList<>();
 
-            TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
-                LOGGER.info("Adding color palette for {}", materialData.materialId());
+            TrimDataReloadManager.TRIM_MATERIALS.forEach(materialData -> {
                 addColorPalette(permutations, materialData.materialId());
                 materialData.overrides().forEach((overrideId, overrideMaterial) ->
                         addColorPalette(permutations, overrideMaterial));
             });
 
-            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternId -> {
+            TrimDataReloadManager.TRIM_PATTERNS.forEach(patternId -> {
                 for (EquipmentType type : EquipmentType.values()) {
                     textures.add(getTextureLocation(type, patternId));
                 }
             });
 
-            LOGGER.info("Materials: {}", TrimMaterialReloadListener.TRIM_MATERIALS);
-            LOGGER.info("Patterns: {}", TrimPatternReloadListener.TRIM_PATTERNS);
-            LOGGER.info("Items: {}", TrimmableItemReloadListener.TRIMMABLE_ITEMS);
-            LOGGER.info("Permutations: {}", permutations);
             sources.add(new PalettedPermutations(textures, PALETTE_KEY, permutations));
         }
         return original.call(sources);

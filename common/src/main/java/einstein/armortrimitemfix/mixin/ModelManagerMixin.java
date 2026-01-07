@@ -3,7 +3,9 @@ package einstein.armortrimitemfix.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
-import einstein.armortrimitemfix.data.*;
+import einstein.armortrimitemfix.data.ArmorTrimProperty;
+import einstein.armortrimitemfix.data.EquipmentType;
+import einstein.armortrimitemfix.data.TrimDataReloadManager;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
 import net.minecraft.client.renderer.block.model.TextureSlots;
@@ -32,8 +34,7 @@ public class ModelManagerMixin {
         Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
         Map<ResourceLocation, ClientItem> contents = new HashMap<>(clientInfos.contents());
 
-/*
-        TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach((itemData) -> {
+        TrimDataReloadManager.TRIMMABLE_ITEMS.forEach((itemData) -> {
             ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
             ClientItem fallbackClientItem = contents.remove(itemId);
             ItemModel.Unbaked fallbackModel = fallbackClientItem != null ? fallbackClientItem.model() : null;
@@ -41,10 +42,10 @@ public class ModelManagerMixin {
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
             EquipmentType type = itemData.type();
 
-            TrimPatternReloadListener.TRIM_PATTERNS.forEach(patternId -> {
+            TrimDataReloadManager.TRIM_PATTERNS.forEach(patternId -> {
                 String patternFileName = patternId.toDebugFileName();
 
-                TrimMaterialReloadListener.TRIM_MATERIALS.forEach(materialData -> {
+                TrimDataReloadManager.TRIM_MATERIALS.forEach(materialData -> {
                     String materialFileName = materialData.getFileName(itemData.overrideId().orElse(null));
                     ResourceLocation modelId = redirectedLoc(itemId.getNamespace(),
                             "item/" + itemId.getPath() + "-" + patternFileName + "-" + materialFileName + "-trim");
@@ -78,7 +79,6 @@ public class ModelManagerMixin {
                     Optional.ofNullable(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
         });
-*/
 
         ((LoadedClientInfosAccessor) (Object) clientInfos).setContents(contents);
         return original.call(models, missingModel);

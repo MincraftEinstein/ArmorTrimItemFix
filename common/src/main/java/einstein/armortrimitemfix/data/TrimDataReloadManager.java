@@ -5,25 +5,37 @@ import com.google.gson.JsonParser;
 import com.mojang.serialization.Dynamic;
 import com.mojang.serialization.JsonOps;
 import einstein.armortrimitemfix.ArmorTrimItemFix;
+import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.server.packs.resources.SimplePreparableReloadListener;
-import net.minecraft.util.profiling.ProfilerFiller;
+import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
 
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 
-public class TrimPatternReloadListener extends SimplePreparableReloadListener<Void> {
+public class TrimDataReloadManager {
 
-    public static final ResourceLocation ID = ArmorTrimItemFix.loc("trim_patterns");
+    public static final List<TrimMaterialData> TRIM_MATERIALS = new ArrayList<>();
     public static final List<ResourceLocation> TRIM_PATTERNS = new ArrayList<>();
+    public static final List<TrimmableItemData> TRIMMABLE_ITEMS = new ArrayList<>();
 
-    @Override
-    protected Void prepare(ResourceManager manager, ProfilerFiller profiler) {
+    private static final FileToIdConverter TRIM_MATERIALS_LISTER = ArmorTrimItemFix.createLister("materials");
+    private static final FileToIdConverter TRIMMABLE_ITEMS_LISTER = ArmorTrimItemFix.createLister("trimmables");
+
+    public static void loadMaterials(ResourceManager manager) {
+        Map<ResourceLocation, TrimMaterialData> resources = new HashMap<>();
+        SimpleJsonResourceReloadListener.scanDirectory(manager, TRIM_MATERIALS_LISTER, JsonOps.INSTANCE, TrimMaterialData.CODEC, resources);
+        TRIM_MATERIALS.clear();
+        TRIM_MATERIALS.addAll(resources.values());
+    }
+
+    public static void loadPatterns(ResourceManager manager) {
         List<ResourceLocation> patterns = new ArrayList<>();
         ResourceLocation location = loc(MOD_ID + "/patterns.json");
 
@@ -49,11 +61,12 @@ public class TrimPatternReloadListener extends SimplePreparableReloadListener<Vo
 
         TRIM_PATTERNS.clear();
         TRIM_PATTERNS.addAll(patterns);
-        LOGGER.info("Patterns loader: {}", TRIM_PATTERNS);
-        return null;
     }
 
-    @Override
-    protected void apply(Void unused, ResourceManager manager, ProfilerFiller profiler) {
+    public static void loadItems(ResourceManager manager) {
+        Map<ResourceLocation, TrimmableItemData> resources = new HashMap<>();
+        SimpleJsonResourceReloadListener.scanDirectory(manager, TRIMMABLE_ITEMS_LISTER, JsonOps.INSTANCE, TrimmableItemData.CODEC, resources);
+        TRIMMABLE_ITEMS.clear();
+        TRIMMABLE_ITEMS.addAll(resources.values());
     }
 }

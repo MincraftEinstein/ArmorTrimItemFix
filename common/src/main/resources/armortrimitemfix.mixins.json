@@ -9,6 +9,7 @@
     "LoadedClientInfosAccessor",
     "ModelManagerMixin",
     "SelectItemModelPropertiesMixin",
+    "SpriteLoaderMixin",
     "SpriteSourceListMixin"
   ],
   "injectors": {

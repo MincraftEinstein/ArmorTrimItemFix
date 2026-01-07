@@ -3,7 +3,7 @@ package einstein.armortrimitemfix;
 import com.google.common.base.Suppliers;
 import com.mojang.brigadier.CommandDispatcher;
 import einstein.armortrimitemfix.data.EquipmentType;
-import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
+import einstein.armortrimitemfix.data.TrimDataReloadManager;
 import einstein.armortrimitemfix.platform.Services;
 import net.minecraft.client.renderer.block.model.TextureSlots;
 import net.minecraft.client.renderer.texture.TextureAtlas;
@@ -71,7 +71,7 @@ public class ArmorTrimItemFix {
 
             // I know this is bad code since the list is loaded from a resource pack, but it works,
             // so I don't care, because this is a development command
-            TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach(data -> {
+            TrimDataReloadManager.TRIMMABLE_ITEMS.forEach(data -> {
                 if ((pos.getX() - playerPos.getX()) >= (materialRegistry.size() + 1) * 5) { // 5 is the number of rows
                     zOffset[0] = pos.getZ() + patternRegistry.size() + 1;
                     pos.setX(playerPos.getX());
