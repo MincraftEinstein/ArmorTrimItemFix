@@ -18,7 +18,7 @@ import net.minecraft.client.resources.model.ModelDiscovery;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -30,15 +30,15 @@ import static einstein.armortrimitemfix.ArmorTrimItemFix.*;
 public class ModelManagerMixin {
 
     @WrapOperation(method = "discoverModelDependencies*", at = @At(value = "NEW", target = "(Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)Lnet/minecraft/client/resources/model/ModelDiscovery;"))
-    private static ModelDiscovery injectModels(Map<ResourceLocation, UnbakedModel> originalModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
-        Map<ResourceLocation, UnbakedModel> models = new HashMap<>(originalModels);
-        Map<ResourceLocation, ClientItem> contents = new HashMap<>(clientInfos.contents());
+    private static ModelDiscovery injectModels(Map<Identifier, UnbakedModel> originalModels, UnbakedModel missingModel, Operation<ModelDiscovery> original, @Local(argsOnly = true) ClientItemInfoLoader.LoadedClientInfos clientInfos) {
+        Map<Identifier, UnbakedModel> models = new HashMap<>(originalModels);
+        Map<Identifier, ClientItem> contents = new HashMap<>(clientInfos.contents());
 
         TrimDataReloadManager.TRIMMABLE_ITEMS.forEach((itemData) -> {
-            ResourceLocation itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
+            Identifier itemId = BuiltInRegistries.ITEM.getKey(itemData.item());
             ClientItem fallbackClientItem = contents.remove(itemId);
             ItemModel.Unbaked fallbackModel = fallbackClientItem != null ? fallbackClientItem.model() : null;
-            Map<String, ResourceLocation> textureLayers = itemData.layers();
+            Map<String, Identifier> textureLayers = itemData.layers();
             List<SelectItemModel.SwitchCase<ArmorTrimProperty.Data>> cases = new ArrayList<>();
             EquipmentType type = itemData.type();
 
@@ -47,7 +47,7 @@ public class ModelManagerMixin {
 
                 TrimDataReloadManager.TRIM_MATERIALS.forEach(materialData -> {
                     String materialFileName = materialData.getFileName(itemData.overrideId().orElse(null));
-                    ResourceLocation modelId = redirectedLoc(itemId.getNamespace(),
+                    Identifier modelId = redirectedId(itemId.getNamespace(),
                             "item/" + itemId.getPath() + "-" + patternFileName + "-" + materialFileName + "-trim");
                     TextureSlots.Data.Builder builder = new TextureSlots.Data.Builder();
 
@@ -62,7 +62,7 @@ public class ModelManagerMixin {
                         lastIndex = index;
                     }
 
-                    addTexture(builder, ++lastIndex, getTextureLocation(type, patternId).withSuffix("_" + materialFileName));
+                    addTexture(builder, ++lastIndex, getTextureId(type, patternId).withSuffix("_" + materialFileName));
                     if (models.put(modelId, new BlockModel(null, null, null, null, builder.build(), GENERATED_MODEL)) != null) {
                         LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
                     }
