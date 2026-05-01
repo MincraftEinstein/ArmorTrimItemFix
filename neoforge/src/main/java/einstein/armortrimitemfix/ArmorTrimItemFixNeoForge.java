@@ -25,7 +25,7 @@ public class ArmorTrimItemFixNeoForge {
 
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
             modEventBus.addListener((AddPackFindersEvent event) ->
-                    event.addPackFinders(ArmorTrimItemFix.MATS_PACK_LOCATION.get(), PackType.CLIENT_RESOURCES,
+                    event.addPackFinders(ArmorTrimItemFix.MATS_PACK_PATH_ID.get(), PackType.CLIENT_RESOURCES,
                             ArmorTrimItemFix.MATS_PACK_NAME, PackSource.BUILT_IN, true, Pack.Position.TOP));
         }
 

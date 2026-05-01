@@ -7,8 +7,8 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
@@ -31,10 +31,15 @@ public class ArmorTrimProperty implements SelectItemModelProperty<ArmorTrimPrope
         return new Data(unwrapId(trim.pattern()), unwrapId(trim.material()));
     }
 
-    private static @Nullable ResourceLocation unwrapId(Holder<?> holder) {
+    @Override
+    public Codec<Data> valueCodec() {
+        return Data.CODEC;
+    }
+
+    private static @Nullable Identifier unwrapId(Holder<?> holder) {
         ResourceKey<?> key = holder.unwrapKey().orElse(null);
         if (key != null) {
-            return key.location();
+            return key.identifier();
         }
         return null;
     }
@@ -44,17 +49,17 @@ public class ArmorTrimProperty implements SelectItemModelProperty<ArmorTrimPrope
         return TYPE;
     }
 
-    public record Data(@Nullable ResourceLocation pattern, @Nullable ResourceLocation material) {
+    public record Data(Identifier pattern, Identifier material) {
 
         public static final Codec<Data> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                ResourceLocation.CODEC.fieldOf("pattern").forGetter(Data::pattern),
-                ResourceLocation.CODEC.fieldOf("material").forGetter(Data::material)
+                Identifier.CODEC.fieldOf("pattern").forGetter(Data::pattern),
+                Identifier.CODEC.fieldOf("material").forGetter(Data::material)
         ).apply(instance, Data::new));
 
         @Override
         public boolean equals(Object obj) {
             if (obj instanceof Data(
-                    ResourceLocation dataPattern, ResourceLocation dataMaterial
+                    Identifier dataPattern, Identifier dataMaterial
             )) {
                 return Objects.equals(pattern, dataPattern) && Objects.equals(material, dataMaterial);
             }
