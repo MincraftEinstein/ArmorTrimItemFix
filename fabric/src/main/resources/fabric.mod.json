@@ -1,43 +1,43 @@
 {
-  "schemaVersion": 1,
-  "id": "armortrimitemfix",
-  "version": "${version}",
-  "name": "Armor Trim Item Fix",
-  "description": "${description}",
-  "authors": [
-    "MincraftEinstein"
-  ],
-  "contact": {
-    "homepage": "https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix",
-    "sources": "https://github.com/MincraftEinstein/ArmorTrimItemFix",
-    "issues": "https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
-  },
-  "license": "All rights reserved",
-  "icon": "pack.png",
-  "environment": "client",
-  "entrypoints": {
-    "main": [
-      "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
-    ]
-  },
-  "accessWidener": "armortrimitemfix.accesswidener",
-  "mixins": [
-    "armortrimitemfix.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=${fabric_version}",
-    "fabric-api": ">=${fabric_api_version}",
-    "minecraft": ">=${minecraft_version} <${max_minecraft_version}",
-    "java": ">=${java_version}"
-  },
-  "custom": {
-    "modmenu": {
-      "links": {
-        "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils",
-        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils",
-        "modmenu.discord": "https://discord.gg/gSsaFAvrBM",
-        "modmenu.kofi": "https://ko-fi.com/mincrafteinstein"
-      }
+    "schemaVersion": 1,
+    "id": "armortrimitemfix",
+    "version": "${version}",
+    "name": "Armor Trim Item Fix",
+    "description": "${description}",
+    "authors": [
+        "MincraftEinstein"
+    ],
+    "contact": {
+        "homepage": "https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix",
+        "sources": "https://github.com/MincraftEinstein/ArmorTrimItemFix",
+        "issues": "https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
+    },
+    "license": "All rights reserved",
+    "icon": "pack.png",
+    "environment": "client",
+    "entrypoints": {
+        "main": [
+            "einstein.armortrimitemfix.ArmorTrimItemFixFabric"
+        ]
+    },
+    "accessWidener": "armortrimitemfix.accesswidener",
+    "mixins": [
+        "armortrimitemfix.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": ">=${fabric_version}",
+        "minecraft": ">=${minecraft_version}",
+        "java": ">=${java_version}"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils",
+                "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils",
+                "modmenu.discord": "https://discord.gg/gSsaFAvrBM",
+                "modmenu.kofi": "https://ko-fi.com/mincrafteinstein"
+            }
+        }
     }
-  }
 }

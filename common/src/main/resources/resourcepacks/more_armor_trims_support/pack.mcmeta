@@ -1,6 +1,7 @@
 {
   "pack": {
-    "pack_format": 55,
+    "min_format": 69,
+    "max_format": 1000,
     "description": {
       "translate": "resourcePack.armortrimitemfix.more_trims_support.description"
     }

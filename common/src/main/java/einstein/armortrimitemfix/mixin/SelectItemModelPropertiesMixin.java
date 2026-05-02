@@ -4,7 +4,7 @@ import einstein.armortrimitemfix.ArmorTrimItemFix;
 import einstein.armortrimitemfix.data.ArmorTrimProperty;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperties;
 import net.minecraft.client.renderer.item.properties.select.SelectItemModelProperty;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.ExtraCodecs;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -18,10 +18,10 @@ public class SelectItemModelPropertiesMixin {
 
     @Shadow
     @Final
-    private static ExtraCodecs.LateBoundIdMapper<ResourceLocation, SelectItemModelProperty.Type<?, ?>> ID_MAPPER;
+    private static ExtraCodecs.LateBoundIdMapper<Identifier, SelectItemModelProperty.Type<?, ?>> ID_MAPPER;
 
     @Inject(method = "bootstrap", at = @At("TAIL"))
     private static void bootstrap(CallbackInfo ci) {
-        ID_MAPPER.put(ArmorTrimItemFix.loc("armor_trim"), ArmorTrimProperty.TYPE);
+        ID_MAPPER.put(ArmorTrimItemFix.id("armor_trim"), ArmorTrimProperty.TYPE);
     }
 }

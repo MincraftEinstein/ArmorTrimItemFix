@@ -3,11 +3,10 @@ package einstein.armortrimitemfix;
 import com.google.common.base.Suppliers;
 import com.mojang.brigadier.CommandDispatcher;
 import einstein.armortrimitemfix.data.EquipmentType;
-import einstein.armortrimitemfix.data.TrimmableItemReloadListener;
+import einstein.armortrimitemfix.data.TrimDataReloadManager;
 import einstein.armortrimitemfix.platform.Services;
-import net.minecraft.client.renderer.block.model.TextureSlots;
-import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.client.resources.model.sprite.TextureSlots;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -17,9 +16,10 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.AtlasIds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.FileToIdConverter;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -30,6 +30,7 @@ import net.minecraft.world.item.equipment.trim.TrimPattern;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import org.joml.Vector3f;
+import org.joml.Vector3fc;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,10 +43,10 @@ public class ArmorTrimItemFix {
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
     public static final String PALETTES_DIRECTORY = "trims/color_palettes/";
-    public static final ResourceLocation PALETTE_KEY = ResourceLocation.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
-    public static final ResourceLocation BLOCKS_ATLAS = ResourceLocation.withDefaultNamespace("blocks");
-    public static final ResourceLocation GENERATED_MODEL = ResourceLocation.withDefaultNamespace("item/generated");
-    public static final Supplier<ResourceLocation> MATS_PACK_LOCATION = Suppliers.memoize(() -> loc("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));
+    public static final Identifier PALETTE_KEY = Identifier.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
+    public static final Identifier ITEMS_ATLAS = Identifier.withDefaultNamespace("block_or_item");
+    public static final Identifier GENERATED_MODEL = Identifier.withDefaultNamespace("item/generated");
+    public static final Supplier<Identifier> MATS_PACK_PATH_ID = Suppliers.memoize(() -> id("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));
     public static final Component MATS_PACK_NAME = Component.translatable("resourcePack.armortrimitemfix.more_armor_trims_support.name");
     public static final String MORE_ARMOR_TRIMS_MOD_ID = "more_armor_trims";
     private static final float EXPAND_AMOUNT = 0.001F;
@@ -70,7 +71,7 @@ public class ArmorTrimItemFix {
 
             // I know this is bad code since the list is loaded from a resource pack, but it works,
             // so I don't care, because this is a development command
-            TrimmableItemReloadListener.TRIMMABLE_ITEMS.forEach(data -> {
+            TrimDataReloadManager.TRIMMABLE_ITEMS.forEach(data -> {
                 if ((pos.getX() - playerPos.getX()) >= (materialRegistry.size() + 1) * 5) { // 5 is the number of rows
                     zOffset[0] = pos.getZ() + patternRegistry.size() + 1;
                     pos.setX(playerPos.getX());
@@ -97,33 +98,32 @@ public class ArmorTrimItemFix {
         }));
     }
 
-    public static ResourceLocation loc(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
-    public static ResourceLocation redirectedLoc(String namespace, String path) {
-        return ResourceLocation.fromNamespaceAndPath(namespace.equals(ResourceLocation.DEFAULT_NAMESPACE) ? MOD_ID : namespace, path);
+    public static Identifier redirectedId(String namespace, String path) {
+        return Identifier.fromNamespaceAndPath(namespace.equals(Identifier.DEFAULT_NAMESPACE) ? MOD_ID : namespace, path);
     }
 
     public static FileToIdConverter createLister(String directory) {
         return FileToIdConverter.json(MOD_ID + "/" + directory);
     }
 
-    @SuppressWarnings("deprecation")
-    public static void addTexture(TextureSlots.Data.Builder builder, int index, ResourceLocation textureLayers) {
-        builder.addTexture("layer" + index, new Material(TextureAtlas.LOCATION_BLOCKS, textureLayers));
+    public static void addTexture(TextureSlots.Data.Builder builder, int index, Identifier textureLayers) {
+        builder.addTexture("layer" + index, new Material(textureLayers, false));
     }
 
-    public static ResourceLocation getTextureLocation(EquipmentType type, ResourceLocation patternId) {
+    public static Identifier getTextureId(EquipmentType type, Identifier patternId) {
         String typeName = type.getSerializedName();
-        return redirectedLoc(patternId.getNamespace(), "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim");
+        return redirectedId(patternId.getNamespace(), "trims/items/" + typeName + "/" + typeName + "_" + patternId.getPath() + "_trim");
     }
 
-    public static void addColorPalette(Map<String, ResourceLocation> permutations, ResourceLocation materialId) {
+    public static void addColorPalette(Map<String, Identifier> permutations, Identifier materialId) {
         permutations.put(materialId.toDebugFileName(), materialId.withPrefix(PALETTES_DIRECTORY));
     }
 
-    public static Vector3f expand(Vector3f vertex, int layerIndex, boolean invert) {
+    public static Vector3fc expand(Vector3fc vertex, int layerIndex, boolean invert) {
         float amount = layerIndex * EXPAND_AMOUNT;
         if (amount > 0) {
             return new Vector3f(

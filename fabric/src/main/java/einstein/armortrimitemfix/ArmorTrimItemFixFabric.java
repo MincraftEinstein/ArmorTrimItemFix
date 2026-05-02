@@ -18,7 +18,7 @@ public class ArmorTrimItemFixFabric implements ModInitializer {
         }
 
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
-            ResourceManagerHelper.registerBuiltinResourcePack(ArmorTrimItemFix.MATS_PACK_LOCATION.get(),
+            ResourceManagerHelper.registerBuiltinResourcePack(ArmorTrimItemFix.MATS_PACK_PATH_ID.get(),
                     FabricLoader.getInstance().getModContainer(ArmorTrimItemFix.MOD_ID).orElseThrow(),
                     ArmorTrimItemFix.MATS_PACK_NAME, ResourcePackActivationType.ALWAYS_ENABLED
             );
