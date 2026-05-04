@@ -6,17 +6,17 @@ import com.llamalad7.mixinextras.sugar.Local;
 import einstein.armortrimitemfix.data.ArmorTrimProperty;
 import einstein.armortrimitemfix.data.EquipmentType;
 import einstein.armortrimitemfix.data.TrimDataReloadManager;
-import net.minecraft.client.renderer.block.model.BlockModel;
-import net.minecraft.client.renderer.block.model.ItemModelGenerator;
-import net.minecraft.client.renderer.block.model.TextureSlots;
-import net.minecraft.client.renderer.item.BlockModelWrapper;
 import net.minecraft.client.renderer.item.ClientItem;
+import net.minecraft.client.renderer.item.CuboidItemModelWrapper;
 import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.SelectItemModel;
 import net.minecraft.client.resources.model.ClientItemInfoLoader;
 import net.minecraft.client.resources.model.ModelDiscovery;
 import net.minecraft.client.resources.model.ModelManager;
 import net.minecraft.client.resources.model.UnbakedModel;
+import net.minecraft.client.resources.model.cuboid.CuboidModel;
+import net.minecraft.client.resources.model.cuboid.ItemModelGenerator;
+import net.minecraft.client.resources.model.sprite.TextureSlots;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
@@ -63,18 +63,19 @@ public class ModelManagerMixin {
                     }
 
                     addTexture(builder, ++lastIndex, getTextureId(type, patternId).withSuffix("_" + materialFileName));
-                    if (models.put(modelId, new BlockModel(null, null, null, null, builder.build(), GENERATED_MODEL)) != null) {
+                    if (models.put(modelId, new CuboidModel(null, null, null, null, builder.build(), GENERATED_MODEL)) != null) {
                         LOGGER.warn("Duplicate model found with id: [{}]. Overriding existing model", modelId);
                     }
 
                     cases.add(new SelectItemModel.SwitchCase<>(
                             List.of(new ArmorTrimProperty.Data(patternId, materialData.materialId())),
-                            new BlockModelWrapper.Unbaked(modelId, itemData.tintSources())
+                            new CuboidItemModelWrapper.Unbaked(modelId, Optional.empty(), itemData.tintSources())
                     ));
                 });
             });
 
             contents.put(itemId, new ClientItem(new SelectItemModel.Unbaked(
+                    Optional.empty(),
                     new SelectItemModel.UnbakedSwitch<>(new ArmorTrimProperty(), cases),
                     Optional.ofNullable(fallbackModel)
             ), ClientItem.Properties.DEFAULT));
