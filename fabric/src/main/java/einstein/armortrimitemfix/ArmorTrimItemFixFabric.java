@@ -4,8 +4,8 @@ import einstein.armortrimitemfix.platform.Services;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
-import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
+import net.fabricmc.fabric.api.resource.v1.pack.PackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class ArmorTrimItemFixFabric implements ModInitializer {
@@ -18,9 +18,9 @@ public class ArmorTrimItemFixFabric implements ModInitializer {
         }
 
         if (Services.PLATFORM.isModLoaded(ArmorTrimItemFix.MORE_ARMOR_TRIMS_MOD_ID)) {
-            ResourceManagerHelper.registerBuiltinResourcePack(ArmorTrimItemFix.MATS_PACK_PATH_ID.get(),
+            ResourceLoader.registerBuiltinPack(ArmorTrimItemFix.MATS_PACK_PATH_ID.get(),
                     FabricLoader.getInstance().getModContainer(ArmorTrimItemFix.MOD_ID).orElseThrow(),
-                    ArmorTrimItemFix.MATS_PACK_NAME, ResourcePackActivationType.ALWAYS_ENABLED
+                    ArmorTrimItemFix.MATS_PACK_NAME, PackActivationType.ALWAYS_ENABLED
             );
         }
 
