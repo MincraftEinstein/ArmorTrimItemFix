@@ -5,8 +5,8 @@ import com.mojang.brigadier.CommandDispatcher;
 import einstein.armortrimitemfix.data.EquipmentType;
 import einstein.armortrimitemfix.data.TrimDataReloadManager;
 import einstein.armortrimitemfix.platform.Services;
-import net.minecraft.client.renderer.block.model.TextureSlots;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.client.resources.model.sprite.TextureSlots;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -16,7 +16,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.AtlasIds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.FileToIdConverter;
 import net.minecraft.resources.Identifier;
@@ -111,7 +110,7 @@ public class ArmorTrimItemFix {
     }
 
     public static void addTexture(TextureSlots.Data.Builder builder, int index, Identifier textureLayers) {
-        builder.addTexture("layer" + index, new Material(ITEMS_ATLAS, textureLayers));
+        builder.addTexture("layer" + index, new Material(textureLayers, false));
     }
 
     public static Identifier getTextureId(EquipmentType type, Identifier patternId) {
