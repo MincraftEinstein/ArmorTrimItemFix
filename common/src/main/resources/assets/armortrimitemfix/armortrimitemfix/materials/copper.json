@@ -1,3 +1,6 @@
 {
-  "material": "minecraft:copper"
+  "material": "minecraft:copper",
+  "overrides": {
+    "minecraft:copper": "minecraft:copper_darker"
+  }
 }
