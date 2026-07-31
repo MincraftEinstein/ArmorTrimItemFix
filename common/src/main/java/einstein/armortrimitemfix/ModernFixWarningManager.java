@@ -22,15 +22,15 @@ public class ModernFixWarningManager {
             return;
         }
 
-        if (minecraft.getOverlay() == null) {
+        if (minecraft.gui.overlay() == null) {
             HAS_SHOWN_TOAST = true;
 
             if (DYNAMIC_RESOURCES_ENABLED) {
-                minecraft.getToastManager().addToast(SystemToast.multiline(
-                        minecraft, new SystemToast.SystemToastId(10000L),
+                SystemToast.add(
+                        minecraft.gui.toastManager(), new SystemToast.SystemToastId(10000L),
                         Component.translatable("toast.armortrimitemfix.warning.modernfix.dynamic_resources.title"),
                         Component.translatable("toast.armortrimitemfix.warning.modernfix.dynamic_resources.description")
-                ));
+                );
             }
         }
     }
