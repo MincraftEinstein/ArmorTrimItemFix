@@ -41,8 +41,8 @@ public class ArmorTrimItemFix {
     public static final String MOD_ID = "armortrimitemfix";
     public static final String MOD_NAME = "ArmorTrimItemFix";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
-    public static final String PALETTES_DIRECTORY = "trims/color_palettes/";
-    public static final Identifier PALETTE_KEY = Identifier.withDefaultNamespace(PALETTES_DIRECTORY + "trim_palette");
+    public static final String PALETTES_DIRECTORY = "trim/";
+    public static final Identifier PALETTE_KEY = Identifier.withDefaultNamespace("trim_base");
     public static final Identifier ITEMS_ATLAS = Identifier.withDefaultNamespace("block_or_item");
     public static final Identifier GENERATED_MODEL = Identifier.withDefaultNamespace("item/generated");
     public static final Supplier<Identifier> MATS_PACK_PATH_ID = Suppliers.memoize(() -> id("more_armor_trims_support").withPrefix(Services.PLATFORM.getPlatformName().equals("NeoForge") ? "resourcepacks/" : ""));

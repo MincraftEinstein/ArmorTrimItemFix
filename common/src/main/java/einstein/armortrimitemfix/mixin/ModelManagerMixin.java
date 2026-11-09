@@ -74,11 +74,14 @@ public class ModelManagerMixin {
                 });
             });
 
-            contents.put(itemId, new ClientItem(new SelectItemModel.Unbaked(
-                    Optional.empty(),
-                    new SelectItemModel.UnbakedSwitch<>(new ArmorTrimProperty(), cases),
-                    Optional.ofNullable(fallbackModel)
-            ), ClientItem.Properties.DEFAULT));
+            contents.put(itemId, new ClientItem(
+                    new SelectItemModel.Unbaked(
+                            Optional.empty(),
+                            new SelectItemModel.UnbakedSwitch<>(new ArmorTrimProperty(), cases),
+                            Optional.ofNullable(fallbackModel)
+                    ),
+                    ClientItem.Properties.DEFAULT
+            ));
         });
 
         ((LoadedClientInfosAccessor) (Object) clientInfos).setContents(contents);
