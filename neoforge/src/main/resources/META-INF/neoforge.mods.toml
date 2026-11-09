@@ -13,6 +13,15 @@ issueTrackerURL="https://github.com/MincraftEinstein/ArmorTrimItemFix/issues"
     authors = "${mod_author}"
     description = "${description}"
 
+[modproperties.modmenu]
+    sources = "https://github.com/MincraftEinstein/ArmorTrimItemFix"
+    links = [
+        "mod_menu.modrinth=https://modrinth.com/mod/armor-trim-item-fix",
+        "mod_menu.curseforge=https://curseforge.com/minecraft/mc-mods/armor-trim-item-fix",
+        "mod_menu.discord=https://discord.gg/gSsaFAvrBM",
+        "mod_menu.kofi=https://ko-fi.com/mincrafteinstein"
+    ]
+
 [[mixins]]
     config = "${mod_id}.mixins.json"
 
